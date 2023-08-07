@@ -16,7 +16,7 @@ alias bettercap='sudo docker run --rm -it --privileged --net=host -p 80:80 -p 80
 alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysql'
 alias ds='docker-compose'
 alias v='vim .'
-alias vjf='cd ~/.config/nvim && vim .'
 alias dit='docker exec -it'
 alias ditu='docker exec -itu root'
+alias djf='cd ~/Projects/jfmelo/dotfiles && vim .'
 
