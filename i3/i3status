@@ -1,0 +1,62 @@
+general {
+        colors = true
+        interval = 2
+        color_good = "#66ff66"
+        color_degraded = "#ffff66"
+        color_bad = "#ff6666"
+        color_separator = "#999999"
+}
+
+
+order += "tztime date"
+order += "tztime local"
+order += "tztime brazil"
+order += "tztime california"
+order += "tztime toronto"
+order += "cpu_usage"
+order += "memory"
+order += "wireless _first_"
+order += "ethernet tun0"
+
+tztime date {
+        format = "🗓️ %A %d/%m %h"
+}
+
+tztime local {
+        format = "🇳🇱 %H:%M"
+}
+
+tztime brazil {
+        format = "🇧🇷 %H:%M"
+        timezone = "America/Sao_Paulo"
+}
+
+tztime california {
+        format = "🇺🇸 %H:%M"
+        timezone = "America/Los_Angeles"
+}
+
+tztime toronto {
+        format = "🇨🇦 %H:%M"
+        timezone = "America/Toronto"
+}
+
+cpu_usage {
+        format = "🔥 %usage"
+}
+
+memory {
+        memory_used_method = classical
+        format = "⚡ %percentage_used"
+}
+
+wireless _first_ {
+        format_up = "🌐 %essid%quality %ip"
+        format_down = "🌐 down"
+}
+
+ethernet tun0 {
+        format_up = "🛡️ %ip    "
+        format_down = "🛡️ Down    "
+}
+
