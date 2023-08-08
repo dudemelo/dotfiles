@@ -1,9 +1,13 @@
 [window]
-opacity = 0.8
-resize_increments = false
+opacity = 0.9
+resize_increments = true
+
+[font]
+normal = { family = "Fira Code", style = "Retina" }
+size = 11
 
 [colors.primary]
-background = "#000000"
+background = "#202230"
 
 [mouse]
 hide_when_typing = true
