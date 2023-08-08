@@ -8,8 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="gozilla"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="gozilla"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -122,6 +122,5 @@ alias ds='docker-compose'
 alias v='vim .'
 alias dit='docker exec -it'
 alias ditu='docker exec -itu root'
-alias djf='cd ~/Projects/jfmelo/dotfiles && vim .'
 alias gooff='nvidia-settings --assign="CurrentMetaMode=DPY-0: nvidia-auto-select @2560x1080 +0+0 {ViewPortIn=2560x1080, ViewPortOut=2560x1080+0+0}" && sleep 2 && nitrogen --restore'
 alias golive='nvidia-settings --assign="CurrentMetaMode=DPY-0: 1920x1080 @1920x1080 +640+0 {ViewPortIn=1920x1080, ViewPortOut=1920x1080+0+0}" && sleep 2 && nitrogen --restore'
