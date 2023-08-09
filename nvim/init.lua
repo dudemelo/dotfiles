@@ -54,7 +54,7 @@ require('lazy').setup({
 		opts = {
 			options = {
 				theme = 'dracula-nvim',
-				icons_enabled = false,
+				-- icons_enabled = false,
 			},
 		},
 	},

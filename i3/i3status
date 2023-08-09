@@ -4,7 +4,6 @@ general {
         color_good = "#66ff66"
         color_degraded = "#ffff66"
         color_bad = "#ff6666"
-        color_separator = "#999999"
 }
 
 
@@ -19,7 +18,7 @@ order += "wireless _first_"
 order += "ethernet tun0"
 
 tztime date {
-        format = "🗓️ %A %d/%m %h"
+        format = "  %d/%m/%y %h, %A"
 }
 
 tztime local {
@@ -42,21 +41,21 @@ tztime toronto {
 }
 
 cpu_usage {
-        format = "🔥 %usage"
+        format = "󰊚 %usage"
 }
 
 memory {
         memory_used_method = classical
-        format = "⚡ %percentage_used"
+        format = "󰍛 %percentage_used"
 }
 
 wireless _first_ {
-        format_up = "🌐 %essid%quality %ip"
-        format_down = "🌐 down"
+        format_up = "󰖩 %essid%quality %ip"
+        format_down = "󰖪 down"
 }
 
 ethernet tun0 {
-        format_up = "🛡️ %ip    "
-        format_down = "🛡️ Down    "
+        format_up = "󰢩 %ip"
+        format_down = "󰢩 Down"
 }
 
