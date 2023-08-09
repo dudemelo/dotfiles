@@ -7,7 +7,7 @@ normal = { family = "FiraCode Nerd Font", style = "Retina" }
 size = 11
 
 [colors.primary]
-background = "#202230"
+background = "#101019"
 
 [mouse]
 hide_when_typing = true
