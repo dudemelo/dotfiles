@@ -23,8 +23,7 @@ return {
 
                 local builtin = require('telescope.builtin')
                 vim.keymap.set('n', '<Leader>?', builtin.oldfiles, { desc = 'Find recently opned files' })
-                vim.keymap.set('n', '<Leader><Space>', builtin.buffers,
-                    { desc = 'Find existing buffers' })
+                vim.keymap.set('n', '<Leader><Space>', builtin.buffers, { desc = 'Find existing buffers' })
                 vim.keymap.set('n', '<Leader>/', function()
                     builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
                         winblend = 10,
