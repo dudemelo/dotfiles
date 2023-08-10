@@ -65,6 +65,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/Projects/jfmelo/dotfiles/oh-my-zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
