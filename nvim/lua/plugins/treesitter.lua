@@ -33,6 +33,8 @@ return {
                 'vue',
                 'yaml',
             },
+            ignore_install = {},
+            modules = {},
             sync_install = false,
             auto_install = false,
             highlight = { enable = true },
