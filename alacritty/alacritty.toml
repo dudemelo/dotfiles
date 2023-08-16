@@ -4,7 +4,7 @@ resize_increments = true
 
 [font]
 normal = { family = "FiraCode Nerd Font", style = "Retina" }
-size = 11
+size = 13
 
 [colors.primary]
 background = "#101019"
