@@ -46,14 +46,11 @@ return {
         end
 
         local servers = {
-            clangd = {},
             dockerls = {},
             gopls = {},
             phpactor = {},
             pyright = {},
-            rust_analyzer = {},
             html = { filetypes = { 'html', 'twig', 'hbs' } },
-
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
