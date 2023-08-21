@@ -26,6 +26,7 @@ require('lazy').setup({
         opts = {
             char = '┊',
             show_trailing_blankline_indent = false,
+            show_current_context = true,
         }
     },
 })
@@ -36,6 +37,7 @@ vim.wo.relativenumber = true
 vim.wo.cursorline = true
 vim.o.mouse = ''
 vim.o.clipboard = 'unnamedplus'
+vim.o.wrap = false
 vim.o.breakindent = true
 vim.o.undofile = true
 vim.o.ignorecase = true
@@ -48,14 +50,18 @@ vim.o.swapfile = false
 vim.o.completeopt = 'menuone,preview'
 vim.o.termguicolors = true
 vim.wo.scrolloff = 15
+vim.o.cmdheight = 0
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<Leader>ex', ':Ex<CR>', { desc = 'Ex mode' })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves line down' })
-vim.keymap.set('v', 'K', ":m '>-3<CR>gv=gv", { desc = 'Moves line up' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves line up' })
 vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { desc = 'Format' })
+-- run the current go file
+vim.keymap.set('n', '<Leader>go', ':!cd %:p:h; go run %:t<CR>', { desc = 'Run the current Go file' })
+vim.keymap.set('n', '<Leader>gt', ':!cd %:p:h; go test %:p:h<CR>', { desc = 'Run the tests for the current Go file' })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
