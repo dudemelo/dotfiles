@@ -7,6 +7,8 @@ return {
         options = {
             theme = 'dracula-nvim',
             icons_enabled = true,
+            component_separators = '|',
+            section_separators = '',
         },
     },
 }

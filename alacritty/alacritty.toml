@@ -1,11 +1,11 @@
 [window]
-opacity = 0.9
+opacity = 0.95
 resize_increments = true
 
 [font]
 normal = { family = "FiraCode Nerd Font", style = "Retina" }
-size = 12
-offset = { x = 0, y = 3 }
+size = 13
+offset = { x = 0, y = 0 }
 
 [colors.primary]
 background = "#101019"
