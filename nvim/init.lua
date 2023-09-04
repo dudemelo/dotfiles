@@ -50,13 +50,11 @@ vim.o.swapfile = false
 vim.o.completeopt = 'menuone,preview'
 vim.o.termguicolors = true
 vim.wo.scrolloff = 15
-vim.o.cmdheight = 1
-vim.o.showmode = false
+-- vim.o.cmdheight = 1
+-- vim.o.showmode = false
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<Leader>ex', ':Ex<CR>', { desc = 'Ex mode' })
--- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
--- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves line down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves line up' })
 vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { desc = 'Format' })

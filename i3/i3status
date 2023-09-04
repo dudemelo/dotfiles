@@ -7,6 +7,7 @@ general {
 }
 
 
+order += "tztime date"
 order += "tztime local"
 order += "tztime brazil"
 order += "tztime california"
@@ -15,7 +16,6 @@ order += "cpu_usage"
 order += "memory"
 order += "wireless _first_"
 order += "ethernet tun0"
-order += "tztime date"
 
 tztime date {
         format = "  %d/%m/%y %h, %A"
