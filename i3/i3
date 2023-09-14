@@ -156,34 +156,53 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 1px or 1 ppt
-        bindsym j resize grow height 1px or 1 ppt
-        bindsym k resize shrink height 1px or 1 ppt
-        bindsym l resize grow width 1px or 1 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym h resize shrink width 1px or 1 ppt
+    bindsym j resize grow height 1px or 1 ppt
+    bindsym k resize shrink height 1px or 1 ppt
+    bindsym l resize grow width 1px or 1 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 1px or 1 ppt
-        bindsym Down resize grow height 1px or 1 ppt
-        bindsym Up resize shrink height 1px or 1 ppt
-        bindsym Right resize grow width 1px or 1 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 1px or 1 ppt
+    bindsym Down resize grow height 1px or 1 ppt
+    bindsym Up resize shrink height 1px or 1 ppt
+    bindsym Right resize grow width 1px or 1 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
+mode "deck" {
+    bindsym a exec ffplay -autoexit -nodisp Music/avast-ameaca-detectada.mp3; exec i3-msg mode 'default'
+    bindsym b exec ffplay -autoexit -nodisp Music/boa-noite-galera.mp3; exec i3-msg mode 'default'
+    bindsym c exec ffplay -autoexit -nodisp Music/quero-cafe-mp3cut.mp3; exec i3-msg mode 'default'
+    bindsym d exec ffplay -autoexit -nodisp Music/doente-de-amor.mp3; exec i3-msg mode 'default'
+    bindsym f exec ffplay -autoexit -nodisp Music/fuck-it-all.mp3; exec i3-msg mode 'default'
+    bindsym g exec ffplay -autoexit -nodisp Music/gloria.mp3; exec i3-msg mode 'default'
+    bindsym i exec ffplay -autoexit -nodisp Music/ibuttons-tarantella-napolitana.mp3; exec i3-msg mode 'default'
+    bindsym m exec ffplay -autoexit -nodisp Music/mario-victory.mp3; exec i3-msg mode 'default'
+    bindsym r exec ffplay -autoexit -nodisp Music/run-vine-sound-effect.mp3; exec i3-msg mode 'default'
+    bindsym s exec ffplay -autoexit -nodisp Music/sheesh.mp3; exec i3-msg mode 'default'
+    bindsym t exec ffplay -autoexit -nodisp Music/twist-it.mp3; exec i3-msg mode 'default'
+    bindsym u exec ffplay -autoexit -nodisp Music/under-water.mp3; exec i3-msg mode 'default'
+    bindsym v exec ffplay -autoexit -nodisp Music/vai-tomar-sua-cu.mp3; exec i3-msg mode 'default'
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+d mode "deck"
+
 bindsym Print exec xfce4-screenshooter --no-border -w -s "Pictures/$(date).png"
 bindsym $mod+Print exec xfce4-screenshooter -r -s /dev/stdout | xclip -i -selection clipboard -t image/png
-
 
 default_border pixel 1
 workspace 1 output HDMI-0
