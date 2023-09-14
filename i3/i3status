@@ -12,6 +12,7 @@ order += "tztime local"
 order += "tztime brazil"
 order += "tztime california"
 order += "tztime toronto"
+order += "tztime india"
 order += "cpu_usage"
 order += "memory"
 order += "wireless _first_"
@@ -38,6 +39,11 @@ tztime california {
 tztime toronto {
         format = "🇨🇦 %H:%M"
         timezone = "America/Toronto"
+}
+
+tztime india {
+        format = "🇮🇳%H:%M"
+        timezone = "Asia/Kolkata"
 }
 
 cpu_usage {
