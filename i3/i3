@@ -190,6 +190,8 @@ mode "deck" {
     bindsym g exec ffplay -autoexit -nodisp Music/gloria.mp3; exec i3-msg mode 'default'
     bindsym i exec ffplay -autoexit -nodisp Music/ibuttons-tarantella-napolitana.mp3; exec i3-msg mode 'default'
     bindsym m exec ffplay -autoexit -nodisp Music/mario-victory.mp3; exec i3-msg mode 'default'
+    bindsym n exec ffplay -autoexit -nodisp Music/naruto.mp3; exec i3-msg mode 'default'
+    bindsym p exec ffplay -autoexit -nodisp Music/phub.mp3; exec i3-msg mode 'default'
     bindsym r exec ffplay -autoexit -nodisp Music/run-vine-sound-effect.mp3; exec i3-msg mode 'default'
     bindsym s exec ffplay -autoexit -nodisp Music/sheesh.mp3; exec i3-msg mode 'default'
     bindsym t exec ffplay -autoexit -nodisp Music/twist-it.mp3; exec i3-msg mode 'default'
