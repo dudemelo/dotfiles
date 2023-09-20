@@ -72,7 +72,7 @@ ZSH_CUSTOM=~/Projects/jfmelo/dotfiles/oh-my-zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pj)
+plugins=(git pj zsh-syntax-highlighting)
 PROJECT_PATHS=(~/Projects/alacritty ~/Projects/jfmelo ~/Projects/every ~/scribbr)
 
 source $ZSH/oh-my-zsh.sh
@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -125,3 +125,4 @@ alias dit='docker exec -it'
 alias ditu='docker exec -itu root'
 alias gooff='nvidia-settings --assign="CurrentMetaMode=DPY-0: nvidia-auto-select @2560x1080 +0+0 {ViewPortIn=2560x1080, ViewPortOut=2560x1080+0+0}" && sleep 2 && xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0 && sleep 2 && nitrogen --restore'
 alias golive='nvidia-settings --assign="CurrentMetaMode=DPY-0: 1920x1080 @1920x1080 +640+0 {ViewPortIn=1920x1080, ViewPortOut=1920x1080+0+0}" && sleep 2 && xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0 && sleep 2 && nitrogen --restore'
+alias ssh='env TERM=xterm-256color ssh'
