@@ -72,7 +72,7 @@ ZSH_CUSTOM=~/Projects/jfmelo/dotfiles/oh-my-zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pj zsh-syntax-highlighting)
+plugins=(git pj zsh-syntax-highlighting timer)
 PROJECT_PATHS=(~/Projects/alacritty ~/Projects/jfmelo ~/Projects/every ~/scribbr)
 
 source $ZSH/oh-my-zsh.sh
@@ -121,6 +121,7 @@ alias bettercap='sudo docker run --rm -it --privileged --net=host -p 80:80 -p 80
 alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysql'
 alias ds='docker-compose'
 alias v='nvim .'
+alias tf='terraform'
 alias dit='docker exec -it'
 alias ditu='docker exec -itu root'
 alias gooff='nvidia-settings --assign="CurrentMetaMode=DPY-0: nvidia-auto-select @2560x1080 +0+0 {ViewPortIn=2560x1080, ViewPortOut=2560x1080+0+0}" && sleep 2 && xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0 && sleep 2 && nitrogen --restore'
