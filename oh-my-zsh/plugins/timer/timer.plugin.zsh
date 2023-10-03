@@ -1,11 +1,22 @@
 function timer() {
-    echo "Enter the total number of minutes:"
-    read total
-    total=$((total*60))
+    local OPTIND opt total description
 
-    echo "Enter the description of what you are doing:"
-    read description
-    clear
+    while getopts "m:t:" opt
+    do
+        case "$opt" in
+        m)  description="$OPTARG" ;;
+        t)  total="$OPTARG" ;;
+        \?) exit 1 ;;
+        esac
+    done
+
+    if [[ -z "$total" ]]
+    then
+        echo "Usage: timer -t <time in minutes> -m <description>"
+        return
+    fi
+
+    total=$((total*60))
 
     echo " $description"
 
@@ -16,7 +27,7 @@ function timer() {
         empty_bar=$((30-filled_bar))
         printf -v filled '%*s' "$filled_bar"
         printf -v empty '%*s' "$empty_bar"
-        echo -ne "\r ${filled// /▓}${empty// /▒} $percent%"
+        echo -ne "\r ${filled// /█}${empty// /░} $percent%"
         sleep 1
     done
     echo
