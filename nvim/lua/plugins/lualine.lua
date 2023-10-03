@@ -5,10 +5,10 @@ return {
     },
     opts = {
         options = {
-            theme = 'dracula-nvim',
-            icons_enabled = true,
-            component_separators = '|',
-            section_separators = '',
+            -- theme = 'dracula-nvim',
+            icons_enabled = false,
+            -- component_separators = '|',
+            -- section_separators = '',
         },
     },
 }
