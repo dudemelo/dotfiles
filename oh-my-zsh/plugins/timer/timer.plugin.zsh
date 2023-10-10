@@ -18,6 +18,7 @@ function timer() {
 
     total=$((total*60))
 
+    clear
     echo " $description"
 
     for ((i=0; i<=total; i++))
