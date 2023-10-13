@@ -119,6 +119,7 @@ alias terraform='docker run --rm -it -v $HOME/.ssh:/root/.ssh -v $HOME/.aws:/roo
 alias eth='docker run -it --rm -v $PWD:/share trailofbits/eth-security-toolbox'
 alias bettercap='sudo docker run --rm -it --privileged --net=host -p 80:80 -p 8081:8081  bettercap/bettercap bettercap'
 alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysql'
+alias redis-cli='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www redis redis-cli'
 alias ds='docker-compose'
 alias v='nvim .'
 alias tf='terraform'
