@@ -36,11 +36,26 @@ return {
             })
         end, { desc = 'Fuzzily search in current buffer' })
 
-        vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Search git files' })
-        vim.keymap.set('n', '<Leader>sf', builtin.find_files, { desc = 'Search files' })
         vim.keymap.set('n', '<Leader>sh', builtin.help_tags, { desc = 'Search help' })
-        vim.keymap.set('n', '<Leader>sw', builtin.grep_string, { desc = 'Search current word' })
-        vim.keymap.set('n', '<Leader>sg', builtin.live_grep, { desc = 'Search by grep' })
         vim.keymap.set('n', '<Leader>sd', builtin.diagnostics, { desc = 'Search diagnostics' })
+        vim.keymap.set('n', '<Leader>sw', builtin.grep_string, { desc = 'Search current word' })
+        vim.keymap.set('n', '<Leader>sg',
+            function()
+                builtin.live_grep({
+                    additional_args = function()
+                        return { "--no-ignore", "-F" }
+                    end,
+                })
+            end,
+            { desc = 'Search by grep' }
+        )
+        vim.keymap.set('n', '<C-p>',
+            function() builtin.git_files({ show_untracked = true }) end,
+            { desc = 'Search git files' }
+        )
+        vim.keymap.set('n', '<Leader>sf',
+            function() builtin.find_files({ no_ignore = true }) end,
+            { desc = 'Search files' }
+        )
     end,
 }
