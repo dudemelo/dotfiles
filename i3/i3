@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 bindsym Print exec xfce4-screenshooter --no-border -w -s "Pictures/$(date).png"
 bindsym $mod+Print exec xfce4-screenshooter -r -s /dev/stdout | xclip -i -selection clipboard -t image/png
 
-default_border pixel 1
+default_border pixel 0
 workspace 1 output HDMI-0
 workspace 2 output HDMI-0
 workspace 3 output HDMI-0
@@ -208,8 +208,8 @@ client.background       #ffffff
 # finds out, if available)
 bar {
         colors {
-                focused_workspace #BD93F9 #BD93F9 #000000
-                inactive_workspace #222222 #222222 #888888
+                focused_workspace #FFFFFF #FFFFFF #000000
+                inactive_workspace #000000 #000000 #666666
                 active_workspace #222222 #222222 #888888
         }
         separator_symbol "  "
