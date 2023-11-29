@@ -130,3 +130,4 @@ alias golive='nvidia-settings --assign="CurrentMetaMode=DPY-0: 1920x1080 @1920x1
 alias fixdirchmod='sudo chown $USER . -Rf; find . -type d -exec chmod 755 {} +; find . -type f -exec chmod 644 {} +;'
 alias ssh='env TERM=xterm-256color ssh'
 alias copy='xclip -sel clip'
+alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpine ab'
