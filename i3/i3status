@@ -42,7 +42,7 @@ tztime toronto {
 }
 
 tztime india {
-        format = "🇮🇳%H:%M"
+        format = "🇮🇳 %H:%M"
         timezone = "Asia/Kolkata"
 }
 
