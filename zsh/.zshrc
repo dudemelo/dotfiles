@@ -119,6 +119,7 @@ alias terraform='docker run --rm -it -v $HOME/.ssh:/root/.ssh -v $HOME/.aws:/roo
 alias eth='docker run -it --rm -v $PWD:/share trailofbits/eth-security-toolbox'
 alias bettercap='sudo docker run --rm -it --privileged --net=host -p 80:80 -p 8081:8081  bettercap/bettercap bettercap'
 alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysql'
+alias mysqldump='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysqldump'
 alias redis-cli='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www redis redis-cli'
 alias ds='docker-compose'
 alias v='nvim .'
@@ -131,3 +132,5 @@ alias fixdirchmod='sudo chown $USER . -Rf; find . -type d -exec chmod 755 {} +; 
 alias ssh='env TERM=xterm-256color ssh'
 alias copy='xclip -sel clip'
 alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpine ab'
+
+xset r rate 250 100

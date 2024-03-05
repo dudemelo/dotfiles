@@ -48,8 +48,6 @@ return {
         local servers = {
             dockerls = {},
             gopls = {},
-            phpactor = {},
-            pyright = {},
             html = { filetypes = { 'html', 'twig', 'hbs' } },
             lua_ls = {
                 Lua = {
@@ -57,6 +55,9 @@ return {
                     telemetry = { enable = false },
                 },
             },
+            phpactor = {},
+            pyright = {},
+            terraformls = {},
         }
 
         -- Setup neovim lua configuration
