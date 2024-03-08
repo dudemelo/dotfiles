@@ -46,9 +46,11 @@ return {
         end
 
         local servers = {
+            clangd = {},
             dockerls = {},
             gopls = {},
             html = { filetypes = { 'html', 'twig', 'hbs' } },
+            tsserver = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
