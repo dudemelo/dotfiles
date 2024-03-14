@@ -26,7 +26,7 @@ require('lazy').setup({
         main = 'ibl',
         opts = {
             indent = {
-                char = '┊',
+                char = '▕',
             },
         }
     },

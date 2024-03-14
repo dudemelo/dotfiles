@@ -5,8 +5,10 @@ return {
     },
     opts = {
         options = {
-            -- theme = 'dracula-nvim',
             icons_enabled = true,
+            refresh = {
+                statusline = 1000,
+            },
             -- component_separators = '|',
             -- section_separators = '',
         },

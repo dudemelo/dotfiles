@@ -114,6 +114,7 @@ export EDITOR='nvim'
 #alias yarn='docker run -it --name yarn --rm -v $PWD:/app -w /app -e HOME=/app -p 1337:1337 node:lts yarn'
 #alias composer='docker run -it --name composer --rm -v $PWD:/app -w /app -e HOME=/app composer composer'
 #alias php='docker run --name php --rm -v $PWD:/var/www -p 8080:8080 -w /var/www php:8-alpine php'
+alias pypy='docker run --name pypy --rm -v $PWD:/var/www -p 8080:8080 -w /var/www pypy:slim pypy'
 alias composer1='docker run -it --name composer --rm -v $PWD:/app -w /app -e HOME=/app composer composer'
 alias terraform='docker run --rm -it -v $HOME/.ssh:/root/.ssh -v $HOME/.aws:/root/.aws -v $PWD:/var/www -w /var/www hashicorp/terraform:latest'
 alias eth='docker run -it --rm -v $PWD:/share trailofbits/eth-security-toolbox'
@@ -133,4 +134,4 @@ alias ssh='env TERM=xterm-256color ssh'
 alias copy='xclip -sel clip'
 alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpine ab'
 
-xset r rate 250 100
+xset r rate 200 100

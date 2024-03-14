@@ -1,5 +1,5 @@
 [window]
-opacity = 0.5
+opacity = 0.4
 resize_increments = true
 
 [font]
@@ -13,7 +13,7 @@ hide_when_typing = true
 # Dracula theme
 [colors.primary]
 # background = "0x282a36"
-background = "#1e1e2e"
+background = "#282a36"
 foreground = "0xf8f8f2"
 
 [colors.normal]
