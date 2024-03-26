@@ -17,4 +17,3 @@ remove:
 	@rm -r ~/.config/i3status
 	@rm -r ~/.config/alacritty
 	@rm -r ~/.config/nvim
-

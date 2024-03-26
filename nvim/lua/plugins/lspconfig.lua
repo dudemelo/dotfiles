@@ -46,11 +46,10 @@ return {
         end
 
         local servers = {
-            clangd = {},
+            intelephense = {},
             dockerls = {},
             gopls = {},
             html = { filetypes = { 'html', 'twig', 'hbs' } },
-            tsserver = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
@@ -59,7 +58,9 @@ return {
             },
             phpactor = {},
             pyright = {},
+            rust_analyzer = {},
             terraformls = {},
+            tsserver = {},
         }
 
         -- Setup neovim lua configuration
