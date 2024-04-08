@@ -9,9 +9,9 @@ config.colors = {
 -- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
-config.font_size = 15.0
+config.font_size = 15
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1
 
 config.window_padding = {
     left = 0,

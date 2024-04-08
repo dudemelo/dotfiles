@@ -21,15 +21,6 @@ require('lazy').setup({
     'tpope/vim-sleuth',
     'github/copilot.vim',
     { 'numToStr/Comment.nvim', config = true },
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        main = 'ibl',
-        opts = {
-            indent = {
-                char = '▕',
-            },
-        }
-    },
 })
 
 vim.o.hlsearch = false
