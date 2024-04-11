@@ -20,4 +20,42 @@ config.window_padding = {
     bottom = 0,
 }
 
+config.inactive_pane_hsb = {
+    saturation = 0.8,
+    brightness = 0.6,
+}
+
+config.keys = {
+    {
+        key = '|',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    },
+    {
+        key = '|',
+        mods = 'CTRL|SHIFT|ALT',
+        action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+    },
+    {
+        key = 'h',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.ActivatePaneDirection 'Left',
+    },
+    {
+        key = 'l',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.ActivatePaneDirection 'Right',
+    },
+    {
+        key = 'k',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.ActivatePaneDirection 'Up',
+    },
+    {
+        key = 'j',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.ActivatePaneDirection 'Down',
+    },
+}
+
 return config
