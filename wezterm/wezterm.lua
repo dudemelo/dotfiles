@@ -1,10 +1,7 @@
 local wezterm = require 'wezterm';
 local config = wezterm.config_builder();
 
-config.color_scheme = "Dracula";
-config.colors = {
-    background = "#191929",
-}
+config.color_scheme = "catppuccin-mocha";
 
 -- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true

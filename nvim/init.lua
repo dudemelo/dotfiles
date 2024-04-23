@@ -23,10 +23,11 @@ require('lazy').setup({
     { 'numToStr/Comment.nvim', config = true },
 })
 
+vim.opt.guicursor = ''
 vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.cursorline = true
+-- vim.wo.cursorline = true
 vim.o.mouse = ''
 vim.o.clipboard = 'unnamedplus'
 vim.o.wrap = false
@@ -34,14 +35,14 @@ vim.o.breakindent = true
 vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.wo.signcolumn = 'yes'
+-- vim.wo.signcolumn = 'yes'
 vim.o.updatetime = 300
 vim.o.timeoutlen = 300
 vim.o.backup = false
 vim.o.swapfile = false
 vim.o.completeopt = 'menuone,preview'
 vim.o.termguicolors = true
-vim.o.scrolloff = 10
+vim.o.scrolloff = 15
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<Leader>ex', ':Ex<CR>', { desc = 'Ex mode' })
