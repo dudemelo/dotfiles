@@ -187,7 +187,8 @@ bindsym $mod+Print exec xfce4-screenshooter -r -s /dev/stdout | xclip -i -select
 
 default_border pixel 0
 workspace 1 output HDMI-0
-workspace 2 output HDMI-0
+# workspace 2 output HDMI-0 #home
+workspace 2 output DP-1-1-2 #office
 workspace 3 output HDMI-0
 workspace 9 output HDMI-0
 workspace 10 output HDMI-0
@@ -219,7 +220,13 @@ bar {
 
 exec xset r rate 200 100
 
-exec xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0
+# home
+# exec xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0
+
+# office
+exec xrandr --output eDP-1-1 --auto --primary --left-of HDMI-0
+exec xrandr --output DP-1-1-2 --auto --right-of HDMI-0
+
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -f --no-fading-openclose --no-fading-destroyed-argb --fade-in-step=1 --fade-out-step=1 --fade-delta=0
 
