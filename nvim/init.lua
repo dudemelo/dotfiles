@@ -42,7 +42,7 @@ vim.o.backup = false
 vim.o.swapfile = false
 vim.o.completeopt = 'menuone,preview'
 vim.o.termguicolors = true
-vim.o.scrolloff = 15
+vim.o.scrolloff = 10
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<Leader>ex', ':Ex<CR>', { desc = 'Ex mode' })

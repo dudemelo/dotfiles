@@ -3,10 +3,15 @@ local config = wezterm.config_builder();
 
 config.color_scheme = "catppuccin-mocha";
 
+config.colors = {
+    cursor_bg = "#f8f8f2",
+    cursor_fg = "#282a36",
+}
+
 -- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
-config.font_size = 15
+config.font_size = 13
 
 config.window_background_opacity = 1
 
