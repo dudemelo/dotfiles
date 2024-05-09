@@ -63,6 +63,7 @@ return {
             rust_analyzer = {},
             terraformls = {},
             tsserver = {},
+            yamlls = {},
         }
 
         -- Setup neovim lua configuration

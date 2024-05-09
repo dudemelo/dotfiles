@@ -5,11 +5,11 @@ return {
     config = function()
         require("catppuccin").setup({
             flavour = "mocha",
-            transparent_background = false,
+            transparent_background = true,
             dim_inactive = {
                 enabled = true,
                 shade = "dark",
-                percentage = 0.30,
+                percentage = 0.15,
             },
             integrations = {
                 cmp = true,
