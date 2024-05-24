@@ -10,7 +10,7 @@ config.colors = {
 
 -- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
-config.font = wezterm.font('FiraCode', { weight = 'Medium' })
+config.font = wezterm.font('IosevkaTerm Nerd Font', { weight = 'Medium' })
 config.use_fancy_tab_bar = false
 config.font_size = 15
 
