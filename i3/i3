@@ -182,8 +182,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym Print exec xfce4-screenshooter --no-border -w -s "Pictures/$(date).png"
-bindsym $mod+Print exec xfce4-screenshooter -r -s /dev/stdout | xclip -i -selection clipboard -t image/png
+bindsym $mod+p exec xfce4-screenshooter --no-border -w -s "Pictures/$(date).png"
+bindsym $mod+Shift+p exec xfce4-screenshooter -r -s /dev/stdout | xclip -i -selection clipboard -t image/png
 
 default_border pixel 0
 workspace 1 output HDMI-0
