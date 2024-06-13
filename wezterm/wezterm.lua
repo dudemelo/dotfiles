@@ -14,7 +14,7 @@ config.font = wezterm.font('IosevkaTerm Nerd Font', { weight = 'Medium' })
 config.use_fancy_tab_bar = false
 config.font_size = 15
 
-config.window_background_opacity = 1
+config.window_background_opacity = 0.85
 
 config.window_padding = {
     left = 0,
@@ -24,7 +24,7 @@ config.window_padding = {
 }
 
 config.inactive_pane_hsb = {
-    saturation = 0.8,
+    saturation = 0.4,
     brightness = 0.6,
 }
 

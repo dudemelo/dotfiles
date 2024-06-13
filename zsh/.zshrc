@@ -123,7 +123,7 @@ alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /va
 alias postgres='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www postgres psql'
 alias mysqldump='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysqldump'
 alias redis-cli='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www redis redis-cli'
-alias ds='docker-compose'
+alias ds='docker compose'
 alias v='nvim .'
 alias tf='terraform'
 alias dit='docker exec -it'

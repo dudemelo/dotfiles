@@ -49,9 +49,6 @@ vim.keymap.set('n', '<Leader>ex', ':Ex<CR>', { desc = 'Ex mode' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves line down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves line up' })
 vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { desc = 'Format' })
--- run the current go file
-vim.keymap.set('n', '<Leader>go', ':!cd %:p:h; go run %:t<CR>', { desc = 'Run the current Go file' })
-vim.keymap.set('n', '<Leader>gt', ':!cd %:p:h; go test %:p:h<CR>', { desc = 'Run the tests for the current Go file' })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
