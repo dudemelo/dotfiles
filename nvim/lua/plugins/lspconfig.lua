@@ -57,6 +57,7 @@ return {
             intelephense = {},
             dockerls = {},
             gopls = {},
+            hadolint = {},
             html = { filetypes = { "html", "twig", "hbs" } },
             lua_ls = {
                 settings = {
@@ -67,10 +68,14 @@ return {
                     },
                 },
             },
+            markdownlint = {},
             phpactor = {},
+            prettier = {},
             pyright = {},
             rust_analyzer = {},
+            stylua = {},
             terraformls = {},
+            tflint = {},
             tsserver = {},
             yamlls = {},
         }
@@ -79,9 +84,6 @@ return {
         require("mason").setup()
 
         local ensure_installed = vim.tbl_keys(servers or {})
-        vim.list_extend(ensure_installed, {
-            "stylua", -- format lua code
-        })
 
         require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

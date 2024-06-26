@@ -22,6 +22,7 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- show live preview of substitution
 vim.opt.cursorline = true -- highlight the current line
 vim.opt.scrolloff = 10 -- keep 10 lines above and below the cursor
+vim.opt.wrap = false -- don't wrap based on the window size
 
 -- highlight search results but clear on <Esc>
 vim.opt.hlsearch = true
@@ -100,7 +101,6 @@ require("lazy").setup({
     },
 })
 
--- vim.o.wrap = false
 -- vim.o.backup = false
 -- vim.o.swapfile = false
 -- vim.o.completeopt = "menuone,preview"

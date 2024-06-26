@@ -18,10 +18,20 @@ return {
             return {
                 timeout_ms = 500,
                 lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+                -- lsp_format = "fallback",
             }
         end,
         formatters_by_ft = {
+            css = { "prettier" },
+            go = { "gofumpt" },
+            html = { "prettier" },
+            javascript = { "prettier" },
+            json = { "prettier" },
             lua = { "stylua" },
+            markdown = { "prettier" },
+            terraform = { "terraform_fmt" },
+            typescript = { "prettier" },
+            yaml = { "prettier" },
         },
     },
 }
