@@ -1,61 +1,61 @@
 return {
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
+    "nvim-telescope/telescope.nvim",
+    event = "VimEnter",
+    branch = "0.1.x",
     dependencies = {
-        'nvim-lua/plenary.nvim',
+        "nvim-lua/plenary.nvim",
         {
-            'nvim-telescope/telescope-fzf-native.nvim',
-            build = 'make',
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make",
             cond = function()
-                return vim.fn.executable 'make' == 1
+                return vim.fn.executable("make") == 1
             end,
+        },
+        { "nvim-telescope/telescope-ui-select.nvim" },
+        {
+            "nvim-tree/nvim-web-devicons",
+            enabled = vim.g.have_nerd_font,
         },
     },
     config = function()
-        local telescope = require('telescope')
-        telescope.setup {
-            defaults = {
-                mappings = {
-                    i = {
-                        ['<C-u>'] = false,
-                        ['<C-d>'] = false,
-                    }
+        require("telescope").setup({
+            extensions = {
+                ["ui-select"] = {
+                    require("telescope.themes").get_dropdown(),
                 },
             },
-        }
+        })
 
-        pcall(telescope.load_extension, 'fzf')
+        pcall(require("telescope").load_extension, "fzf")
+        pcall(require("telescope").load_extension, "ui-select")
 
-        local builtin = require('telescope.builtin')
-        vim.keymap.set('n', '<Leader>?', builtin.oldfiles, { desc = 'Find recently opned files' })
-        vim.keymap.set('n', '<Leader><Space>', builtin.buffers, { desc = 'Find existing buffers' })
-        vim.keymap.set('n', '<Leader>/', function()
-            builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+        local builtin = require("telescope.builtin")
+        vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
+        vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
+        vim.keymap.set("n", "<leader>sf", function()
+            builtin.find_files({ no_ignore = true })
+        end, { desc = "[S]earch [F]iles without .gitignore" })
+        vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+        vim.keymap.set("n", "<leader>sg", function()
+            builtin.live_grep({
+                additional_args = function()
+                    return { "--no-ignore", "-F" }
+                end,
+            })
+        end, { desc = "[S]earch by [G]rep without .gitignore" })
+        vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
+        vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = "[S]earch recent files" })
+        vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Find existing buffers" })
+
+        vim.keymap.set("n", "<leader>/", function()
+            builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
                 winblend = 10,
                 previewer = false,
-            })
-        end, { desc = 'Fuzzily search in current buffer' })
+            }))
+        end, { desc = "Fuzzily search in current buffer" })
 
-        vim.keymap.set('n', '<Leader>sh', builtin.help_tags, { desc = 'Search help' })
-        vim.keymap.set('n', '<Leader>sd', builtin.diagnostics, { desc = 'Search diagnostics' })
-        vim.keymap.set('n', '<Leader>sw', builtin.grep_string, { desc = 'Search current word' })
-        vim.keymap.set('n', '<Leader>sg',
-            function()
-                builtin.live_grep({
-                    additional_args = function()
-                        return { "--no-ignore", "-F" }
-                    end,
-                })
-            end,
-            { desc = 'Search by grep' }
-        )
-        vim.keymap.set('n', '<C-p>',
-            function() builtin.git_files({ show_untracked = true }) end,
-            { desc = 'Search git files' }
-        )
-        vim.keymap.set('n', '<Leader>sf',
-            function() builtin.find_files({ no_ignore = true }) end,
-            { desc = 'Search files' }
-        )
+        vim.keymap.set("n", "<C-p>", function()
+            builtin.git_files({ show_untracked = true })
+        end, { desc = "Search git files" })
     end,
 }

@@ -1,7 +1,7 @@
 return {
-    'nvim-lualine/lualine.nvim',
+    "nvim-lualine/lualine.nvim",
     dependencies = {
-        { 'nvim-tree/nvim-web-devicons', opt = true },
+        { "nvim-tree/nvim-web-devicons", opt = true },
     },
     opts = {
         options = {
@@ -9,8 +9,6 @@ return {
             refresh = {
                 statusline = 1000,
             },
-            -- component_separators = '|',
-            -- section_separators = '',
         },
     },
 }

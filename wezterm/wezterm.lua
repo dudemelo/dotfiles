@@ -1,7 +1,7 @@
-local wezterm = require 'wezterm';
-local config = wezterm.config_builder();
+local wezterm = require("wezterm")
+local config = wezterm.config_builder()
 
-config.color_scheme = "catppuccin-mocha";
+config.color_scheme = "catppuccin-mocha"
 
 config.colors = {
     cursor_bg = "#f8f8f2",
@@ -10,7 +10,7 @@ config.colors = {
 
 -- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
-config.font = wezterm.font('IosevkaTerm Nerd Font', { weight = 'Medium' })
+config.font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" })
 config.use_fancy_tab_bar = false
 config.font_size = 15
 
@@ -30,34 +30,34 @@ config.inactive_pane_hsb = {
 
 config.keys = {
     {
-        key = '|',
-        mods = 'CTRL|SHIFT',
-        action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+        key = "|",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     },
     {
-        key = '|',
-        mods = 'CTRL|SHIFT|ALT',
-        action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+        key = "|",
+        mods = "CTRL|SHIFT|ALT",
+        action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
     {
-        key = 'h',
-        mods = 'CTRL|SHIFT',
-        action = wezterm.action.ActivatePaneDirection 'Left',
+        key = "h",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivatePaneDirection("Left"),
     },
     {
-        key = 'l',
-        mods = 'CTRL|SHIFT',
-        action = wezterm.action.ActivatePaneDirection 'Right',
+        key = "l",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivatePaneDirection("Right"),
     },
     {
-        key = 'k',
-        mods = 'CTRL|SHIFT',
-        action = wezterm.action.ActivatePaneDirection 'Up',
+        key = "k",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivatePaneDirection("Up"),
     },
     {
-        key = 'j',
-        mods = 'CTRL|SHIFT',
-        action = wezterm.action.ActivatePaneDirection 'Down',
+        key = "j",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivatePaneDirection("Down"),
     },
 }
 
