@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
+vim.g.termguicolors = true
 
 vim.opt.guicursor = "" -- block cursor always
 vim.opt.number = true -- @todo is this needed since I only use relative?
@@ -100,9 +101,3 @@ require("lazy").setup({
         },
     },
 })
-
--- vim.o.backup = false
--- vim.o.swapfile = false
--- vim.o.completeopt = "menuone,preview"
--- vim.o.termguicolors = true
---
