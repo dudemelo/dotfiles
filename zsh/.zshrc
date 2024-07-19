@@ -122,7 +122,7 @@ alias bettercap='sudo docker run --rm -it --privileged --net=host -p 80:80 -p 80
 alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysql'
 alias postgres='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www postgres:alpine psql'
 alias mysqldump='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysqldump'
-alias redis-cli='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www redis redis-cli'
+alias redis-cli='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www redis:alpine redis-cli'
 alias ds='docker compose'
 alias v='nvim .'
 alias tf='terraform'
