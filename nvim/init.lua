@@ -27,7 +27,7 @@ vim.opt.wrap = false -- don't wrap based on the window size
 
 -- highlight search results but clear on <Esc>
 vim.opt.hlsearch = true
-vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
+vim.keymap.set("n", "<leader><Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- disable space key in normal and visual mode
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
