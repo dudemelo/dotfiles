@@ -3,27 +3,30 @@ vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
 vim.g.termguicolors = true
 
-vim.opt.guicursor = "" -- block cursor always
-vim.opt.number = true -- @todo is this needed since I only use relative?
+vim.opt.guicursor = ""   -- block cursor always
+vim.opt.number = true    -- @todo is this needed since I only use relative?
 vim.opt.relativenumber = true
-vim.opt.mouse = "" -- disable mouse mode
+vim.opt.mouse = ""       -- disable mouse mode
 vim.opt.showmode = false -- mode is already in the statusline
-vim.opt.clipboard = "unnamedplus" -- sync clipboard with OS
+-- vim.opt.clipboard = "unnamedplus" -- sync clipboard with OS
+vim.schedule(function()  -- same as above but with a delay
+    vim.opt.clipboard = 'unnamedplus'
+end)
 vim.opt.breakindent = true
-vim.opt.undofile = true -- save undo history to file
-vim.opt.ignorecase = true -- ignore case when searching unless a capital letter is used
+vim.opt.undofile = true      -- save undo history to file
+vim.opt.ignorecase = true    -- ignore case when searching unless a capital letter is used
 vim.opt.smartcase = true
-vim.opt.signcolumn = "yes" -- sign column always visible
-vim.opt.updatetime = 300 -- reduce the time to save swap files
-vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete
-vim.opt.splitright = true -- open new split to the right
-vim.opt.splitbelow = true -- open new split below
-vim.opt.list = true -- @todo this doesn't seem to work
+vim.opt.signcolumn = "yes"   -- sign column always visible
+vim.opt.updatetime = 300     -- reduce the time to save swap files
+vim.opt.timeoutlen = 300     -- time to wait for a mapped sequence to complete
+vim.opt.splitright = true    -- open new split to the right
+vim.opt.splitbelow = true    -- open new split below
+vim.opt.list = true          -- @todo this doesn't seem to work
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- show live preview of substitution
-vim.opt.cursorline = true -- highlight the current line
-vim.opt.scrolloff = 10 -- keep 10 lines above and below the cursor
-vim.opt.wrap = false -- don't wrap based on the window size
+vim.opt.cursorline = true    -- highlight the current line
+vim.opt.scrolloff = 10       -- keep 10 lines above and below the cursor
+vim.opt.wrap = false         -- don't wrap based on the window size
 
 -- highlight search results but clear on <Esc>
 vim.opt.hlsearch = true
@@ -73,7 +76,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- ocnfigured and install plugins
 require("lazy").setup({
-    "tpope/vim-sleuth", -- detect tabstop and shiftwidth
+    "tpope/vim-sleuth",                     -- detect tabstop and shiftwidth
     { "numToStr/Comment.nvim", opts = {} }, -- gc to comment visual lines
     { import = "plugins" },
     "tpope/vim-fugitive",

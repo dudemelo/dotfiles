@@ -219,6 +219,9 @@ bar {
 }
 
 exec xset r rate 200 100
+# exec xinput
+# exec xinput --list-prop 10
+# exec xinput --set-prop 10 363 1
 
 # home
 exec xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0

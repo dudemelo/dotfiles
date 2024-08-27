@@ -4,6 +4,7 @@ return {
     opts = {
         ensure_installed = {
             "css",
+            "diff",
             "dockerfile",
             "gitignore",
             "go",
@@ -16,8 +17,10 @@ return {
             "phpdoc",
             "make",
             "markdown",
+            "markdown_inline",
             "ocaml",
             "python",
+            "query",
             "rust",
             "sql",
             "terraform",
@@ -40,7 +43,6 @@ return {
         },
     },
     config = function(_, opts)
-        require("nvim-treesitter.install").prefer_git = true
         require("nvim-treesitter.configs").setup(opts)
     end,
 }
