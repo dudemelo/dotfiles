@@ -76,7 +76,6 @@ return {
             stylua = {},
             terraformls = {},
             tflint = {},
-            tsserver = {},
             yamlls = {},
         }
 
