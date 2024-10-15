@@ -233,3 +233,4 @@ exec xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -f --no-fading-openclose --no-fading-destroyed-argb --fade-in-step=1 --fade-out-step=1 --fade-delta=0
 
+exec --no-startup-id /usr/lib/pentablet/PenTablet.sh /mini
