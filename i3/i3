@@ -224,7 +224,7 @@ exec xset r rate 200 100
 # exec xinput --set-prop 10 363 1
 
 # home
-exec xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0
+exec xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0 --output HDMI-0 --mode 2560x1080 --rate 74.99
 
 # office
 # exec xrandr --output eDP-1-1 --auto --primary --left-of HDMI-0
