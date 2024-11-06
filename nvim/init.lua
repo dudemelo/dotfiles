@@ -81,7 +81,6 @@ require("lazy").setup({
     { import = "plugins" },
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb", -- @todo what is this about?
-    "github/copilot.vim",
     { "folke/todo-comments.nvim", event = "VimEnter", dependencies = { "nvim-lua/plenary.nvim" } },
 }, {
     ui = {
