@@ -4,8 +4,8 @@ return {
         { "williamboman/mason.nvim", config = true },
         "williamboman/mason-lspconfig.nvim",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
-        { "j-hui/fidget.nvim",       opts = {} },
-        { "folke/neodev.nvim",       opts = {} },
+        { "j-hui/fidget.nvim", opts = {} },
+        { "folke/neodev.nvim", opts = {} },
     },
     config = function()
         vim.lsp.set_log_level("OFF")
@@ -72,7 +72,7 @@ return {
             phpactor = {},
             prettier = {},
             pyright = {},
-            rust_analyzer = {},
+            -- rust_analyzer = {},
             stylua = {},
             terraformls = {},
             tflint = {},
@@ -100,6 +100,6 @@ return {
             capabilities = capabilities,
             settings = {},
         }
-        require('lspconfig').gdscript.setup(gdscript_config)
+        require("lspconfig").gdscript.setup(gdscript_config)
     end,
 }
