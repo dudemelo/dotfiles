@@ -1,0 +1,47 @@
+{
+    "interval": 5,
+    "modules-left": ["custom/date", "custom/local", "custom/brazil", "custom/california", "custom/india"],
+    "modules-right": ["battery", "bluetooth", "cpu", "tray", "pulseaudio"],
+    "custom/date": {
+        "exec": "date +'%d/%m/%y %H, %A'",
+        "return-type": "plain-text",
+        "interval": 60
+    },
+    "custom/local": {
+        "exec": "date +'%H:%M'",
+        "return-type": "plain-text",
+        "interval": 60
+    },
+    "custom/brazil": {
+        "exec": "TZ='America/Sao_Paulo' date +'%H:%M'",
+        "return-type": "plain-text",
+        "interval": 60
+    },
+    "custom/california": {
+        "exec": "TZ='America/Los_Angeles' date +'%H:%M'",
+        "return-type": "plain-text",
+        "interval": 60
+    },
+    "custom/india": {
+        "exec": "TZ='Asia/Kolkata' date +'%H:%M'",
+        "return-type": "plain-text",
+        "interval": 60
+    },
+    "cpu": {
+        "format": "󰊚 {usage}%",
+        "interval": 5
+    },
+    "memory": {
+        "format": "󰍛 {percent_used}%",
+        "interval": 5
+    },
+    "network": {
+        "format-wifi": "󰖩 {essid} {quality} {ip}",
+        "format-ethernet": "󰢩 {ip}",
+        "interval": 5
+    },
+    "tray": {
+        "show-passive-items": true,
+        "spacing": 10
+    }
+}
