@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:/opt/nvim-linux64/bin:/usr/local/go/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -65,7 +66,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-ZSH_CUSTOM=~/Projects/jfmelo/dotfiles/oh-my-zsh
+ZSH_CUSTOM=/home/jfmelo/Projects/dotfiles/oh-my-zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -73,7 +74,7 @@ ZSH_CUSTOM=~/Projects/jfmelo/dotfiles/oh-my-zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git pj zsh-syntax-highlighting timer)
-PROJECT_PATHS=(~/Projects/alacritty ~/Projects/jfmelo ~/Projects/every ~/scribbr)
+PROJECT_PATHS=(~/Projects ~/scribbr)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,12 +86,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-export EDITOR='nvim'
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -136,4 +136,6 @@ alias copy='xclip -sel clip'
 alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpine ab'
 alias dotnet='docker run -it -v $PWD:/var/www -w /var/www --rm -p 8000:8080 mcr.microsoft.com/dotnet/sdk:8.0 dotnet'
 
-xset r rate 200 100
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
