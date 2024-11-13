@@ -8,11 +8,9 @@ config.colors = {
     cursor_fg = "#282a36",
 }
 
--- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" })
-config.use_fancy_tab_bar = false
-config.font_size = 14
+config.font_size = 13
 
 -- config.window_background_opacity = 0.90
 
