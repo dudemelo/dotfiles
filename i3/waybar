@@ -1,47 +1,70 @@
-{
-    "interval": 5,
-    "modules-left": ["custom/date", "custom/local", "custom/brazil", "custom/california", "custom/india"],
-    "modules-right": ["battery", "bluetooth", "cpu", "tray", "pulseaudio"],
-    "custom/date": {
-        "exec": "date +'%d/%m/%y %H, %A'",
-        "return-type": "plain-text",
-        "interval": 60
+[
+    {
+        "layer": "top",
+        "position": "top",
+        "output": "DP-5",
+        "modules-left": [
+            "sway/workspaces",
+            "custom/media",
+        ],
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+            "network",
+            "cpu",
+            "memory",
+            "temperature",
+            "battery",
+            "tray"
+        ],
+        "battery": {
+            "states": {
+                "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-full": "{capacity}% {icon}",
+            "format-charging": "{capacity}% ",
+            "format-plugged": "{capacity}% ",
+            "format-alt": "{time} {icon}",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "clock": {
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format-alt": "{:%Y-%m-%d}"
+        },
+        "cpu": {
+            "format": "{usage}% ",
+            "tooltip": false
+        },
+        "memory": {
+            "format": "{}% "
+        },
+        "temperature": {
+            "critical-threshold": 80,
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": ["", "", ""]
+        },
+        "network": {
+            "format-wifi": "{essid} ({signalStrength}%) ",
+            "format-ethernet": "{ipaddr}/{cidr} ",
+            "tooltip-format": "{ifname} via {gwaddr} ",
+            "format-linked": "{ifname} (No IP) ",
+            "format-disconnected": "Disconnected ⚠",
+            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
+        "tray": {
+            "icon-size": 21,
+            "spacing": 10
+        }
     },
-    "custom/local": {
-        "exec": "date +'%H:%M'",
-        "return-type": "plain-text",
-        "interval": 60
-    },
-    "custom/brazil": {
-        "exec": "TZ='America/Sao_Paulo' date +'%H:%M'",
-        "return-type": "plain-text",
-        "interval": 60
-    },
-    "custom/california": {
-        "exec": "TZ='America/Los_Angeles' date +'%H:%M'",
-        "return-type": "plain-text",
-        "interval": 60
-    },
-    "custom/india": {
-        "exec": "TZ='Asia/Kolkata' date +'%H:%M'",
-        "return-type": "plain-text",
-        "interval": 60
-    },
-    "cpu": {
-        "format": "󰊚 {usage}%",
-        "interval": 5
-    },
-    "memory": {
-        "format": "󰍛 {percent_used}%",
-        "interval": 5
-    },
-    "network": {
-        "format-wifi": "󰖩 {essid} {quality} {ip}",
-        "format-ethernet": "󰢩 {ip}",
-        "interval": 5
-    },
-    "tray": {
-        "show-passive-items": true,
-        "spacing": 10
+    {
+        "layer": "top",
+        "spacing": 0,
+        "position": "top",
+        "output": "eDP-1",
+        "modules-left": ["sway/workspaces"]
     }
-}
+]

@@ -20,6 +20,17 @@ set $term /home/jfmelo/Projects/wezterm/target/release/wezterm
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec xss-lock --transfer-sleep-lock -- swaylock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec nm-applet
+
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
@@ -31,10 +42,11 @@ include /etc/sway/config-vars.d/*
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output DP-5 bg /home/jfmelo/Pictures/anime-girl-2.jpg fill
+output eDP-1 bg /home/jfmelo/Pictures/anime-girl-1.jpg fill
 
-output eDP-1 pos 2560 0
-output DP-5 pos 0 0
+output DP-5 pos 0 0 res 2560x1080@74.991Hz
+output eDP-1 pos 2560 0 res 2560x1600@120.000Hz
 
 workspace 1 output DP-5
 workspace 2 output DP-5
@@ -69,11 +81,13 @@ workspace 6 output eDP-1
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-input "*" {
+
+input "type:keyboard" {
     repeat_delay 200
     repeat_rate 100
+    xkb_layout us(intl)
+    xkb_variant ,
 }
-
 ### Key bindings
 #
 # Basics:
@@ -82,7 +96,7 @@ input "*" {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -161,9 +175,9 @@ input "*" {
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -175,7 +189,7 @@ input "*" {
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    # bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
@@ -211,6 +225,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
 client.focused          #BD93F9 #000000 #ffffff #BD93F9   #BD93F9
@@ -220,22 +235,16 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #000000 #ffffff #000000   #000000
 client.background       #ffffff
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-# bar {
-#     status_command i3status
-#     position top
-#     colors {
-#         # statusline #ffffff
-#         # background #323232
-#         focused_workspace #FFFFFF #FFFFFF #000000
-#         inactive_workspace #000000 #000000 #666666
-#         active_workspace #222222 #222222 #888888
-#     }
-# }
+default_border pixel 1
 
-exec waybar
+bindsym $mod+p exec grimshot save window ~/Pictures/Screenshots/screenshot_$(date +%F_%T).png
+bindsym $mod+Shift+p exec grimshot copy area
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 include /etc/sway/config.d/*
+
+bar swaybar_command waybar
