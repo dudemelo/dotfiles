@@ -46,7 +46,7 @@ output DP-5 bg /home/jfmelo/Pictures/anime-girl-2.jpg fill
 output eDP-1 bg /home/jfmelo/Pictures/anime-girl-1.jpg fill
 
 output DP-5 pos 0 0 res 2560x1080@74.991Hz
-output eDP-1 pos 2560 0 res 2560x1600@120.000Hz
+output eDP-1 pos 2560 0 res 2560x1600@120.000Hz scale 1.5
 
 workspace 1 output DP-5
 workspace 2 output DP-5
