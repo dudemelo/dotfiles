@@ -8,7 +8,6 @@ vim.opt.number = true -- @todo is this needed since I only use relative?
 vim.opt.relativenumber = true
 vim.opt.mouse = "" -- disable mouse mode
 vim.opt.showmode = false -- mode is already in the statusline
--- vim.opt.clipboard = "unnamedplus" -- sync clipboard with OS
 vim.schedule(function() -- same as above but with a delay
     vim.opt.clipboard = "unnamedplus"
 end)

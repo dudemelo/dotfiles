@@ -248,3 +248,5 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 include /etc/sway/config.d/*
 
 bar swaybar_command waybar
+
+exec /usr/lib/pentablet/PenTablet.sh /mini
