@@ -20,6 +20,11 @@ set $term /home/jfmelo/Projects/wezterm/target/release/wezterm
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway
+exec dex --autostart --environment sway
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
