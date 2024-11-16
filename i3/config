@@ -31,6 +31,9 @@ exec xss-lock --transfer-sleep-lock -- swaylock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec nm-applet
 
+# Bluetooth manager
+exec blueman-applet
+
 include /etc/sway/config-vars.d/*
 
 ### Output configuration

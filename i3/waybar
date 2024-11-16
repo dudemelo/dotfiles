@@ -86,14 +86,23 @@
         "spacing": 0,
         "position": "top",
         "output": "eDP-1",
+        "mode": "dock",
+        "reload_style_on_change": true,
         "modules-left": ["sway/workspaces"],
         "modules-center": [
             "clock"
+        ],
+        "modules-right": [
+            "bluetooth",
+            "tray"
         ],
         "clock": {
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format-alt": "{:%Y-%m-%d}"
         },
-        "reload_style_on_change": true
+        "tray": {
+            "icon-size": 21,
+            "spacing": 10
+        }
     }
 ]
