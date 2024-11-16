@@ -10,9 +10,7 @@ config.colors = {
 
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" })
-config.font_size = 13
-
--- config.window_background_opacity = 0.90
+config.font_size = 13.8
 
 config.window_padding = {
     left = 0,
