@@ -23,6 +23,8 @@ return {
             }
         end,
         formatters_by_ft = {
+            c = { "clang_format" },
+            cpp = { "clang_format" },
             css = { "prettier" },
             go = { "gofumpt" },
             html = { "prettier" },
@@ -33,6 +35,13 @@ return {
             terraform = { "terraform_fmt" },
             typescript = { "prettier" },
             yaml = { "prettier" },
+        },
+        formatters = {
+            clang_format = function()
+                return {
+                    args = { "--style", "{ColumnLimit: 0}" },
+                }
+            end,
         },
     },
 }
