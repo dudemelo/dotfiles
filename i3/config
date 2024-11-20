@@ -257,4 +257,4 @@ include /etc/sway/config.d/*
 
 bar swaybar_command waybar
 
-exec /usr/lib/pentablet/PenTablet.sh /mini
+# exec /usr/lib/pentablet/PenTablet.sh /mini
