@@ -1,6 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    main = "nvim-treesitter.configs",
     opts = {
         ensure_installed = {
             "css",
@@ -42,7 +43,4 @@ return {
             disable = { "ruby" },
         },
     },
-    config = function(_, opts)
-        require("nvim-treesitter.configs").setup(opts)
-    end,
 }
