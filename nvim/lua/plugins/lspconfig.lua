@@ -54,6 +54,7 @@ return {
         capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
         local servers = {
+            clangd = {},
             intelephense = {},
             dockerls = {},
             gopls = {},
@@ -72,7 +73,7 @@ return {
             phpactor = {},
             prettier = {},
             pyright = {},
-            -- rust_analyzer = {},
+            rust_analyzer = {},
             stylua = {},
             terraformls = {},
             tflint = {},
