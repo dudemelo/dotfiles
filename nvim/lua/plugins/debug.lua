@@ -69,12 +69,19 @@ return {
             desc = "Debug: Set Breakpoint",
         },
         -- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
+        -- {
+        --     "<F7>",
+        --     function()
+        --         require("dapui").toggle()
+        --     end,
+        --     desc = "Debug: See last session result.",
+        -- },
         {
             "<F7>",
             function()
-                require("dapui").toggle()
+                require("dap").stop()
             end,
-            desc = "Debug: See last session result.",
+            desc = "Debug: Stop the session.",
         },
     },
     config = function()
