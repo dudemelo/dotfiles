@@ -1,7 +1,7 @@
 [
     {
         "layer": "top",
-        "output": "DP-5",
+        "output": "DP-6",
         "position": "top",
         "modules-left": [
             "sway/workspaces",
