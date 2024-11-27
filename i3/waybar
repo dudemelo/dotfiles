@@ -1,7 +1,7 @@
 [
     {
         "layer": "top",
-        "output": "DP-6",
+        "output": "DP-5",
         "position": "top",
         "modules-left": [
             "sway/workspaces",
@@ -60,7 +60,7 @@
             "format-alt": "{ifname}: {ipaddr}/{cidr}"
         },
         "tray": {
-            "icon-size": 24,
+            "icon-size": 20,
             "spacing": 10
         },
         "pulseaudio": {
