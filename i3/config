@@ -69,9 +69,9 @@ workspace 5 output eDP-1
 workspace 6 output eDP-1
 
 # home setup
-# # workspace 1 output DP-5
-# # workspace 2 output DP-5
-# # workspace 3 output DP-5
+workspace 1 output DP-5
+workspace 2 output DP-5
+workspace 3 output DP-5
 
 # office setup
 # workspace 1 output DP-4
