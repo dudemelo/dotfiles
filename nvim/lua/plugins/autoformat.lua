@@ -36,12 +36,5 @@ return {
             typescript = { "prettier" },
             yaml = { "prettier" },
         },
-        formatters = {
-            clang_format = function()
-                return {
-                    args = { "--style", "{ColumnLimit: 0}" },
-                }
-            end,
-        },
     },
 }
