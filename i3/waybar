@@ -17,8 +17,8 @@
             "temperature",
             "battery",
             "bluetooth",
-            "tray",
-            "pulseaudio"
+            "pulseaudio",
+            "tray"
         ],
         "mode": "dock",
         "reload_style_on_change": true,
@@ -116,7 +116,7 @@
             "format-icons": ["", "", "", "", ""]
         },
         "tray": {
-            "icon-size": 21,
+            "icon-size": 20,
             "spacing": 10
         }
     }
