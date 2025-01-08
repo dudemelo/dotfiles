@@ -106,7 +106,7 @@ workspace 3 output DP-5
 # Read `man 5 sway-input` for more information about this section.
 
 input "type:keyboard" {
-    repeat_delay 200
+    repeat_delay 150
     repeat_rate 100
     xkb_layout us(intl)
     xkb_variant ,
