@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 config.color_scheme = "catppuccin-mocha"
 
 config.colors = {
+    background = "black",
     cursor_bg = "#f8f8f2",
     cursor_fg = "#282a36",
 }
