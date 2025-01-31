@@ -134,6 +134,7 @@ alias ssh='env TERM=xterm-256color ssh'
 alias copy='xclip -sel clip'
 alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpine ab'
 alias dotnet='docker run -it -v $PWD:/var/www -w /var/www --rm -p 8000:8080 mcr.microsoft.com/dotnet/sdk:8.0 dotnet'
+alias up='sudo apt update; sudo apt dist-upgrade; sudo apt autoremove; sudo apt autoclean; sudo apt remove; sudo apt clean'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
