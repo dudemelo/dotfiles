@@ -5,22 +5,27 @@ return {
     config = function()
         require("catppuccin").setup({
             flavour = "mocha",
-            transparent_background = true,
             dim_inactive = {
                 enabled = true,
-                shade = "dark",
-                percentage = 0.15,
+                shade = "light",
+                percentage = 0.20,
+            },
+            color_overrides = {
+                mocha = {
+                    base = "#000000",
+                    mantle = "#000000",
+                    crust = "#000000",
+                },
             },
             integrations = {
                 cmp = true,
-                gitsigns = true,
-                nvimtree = true,
-                treesitter = true,
-                notify = false,
-                mini = {
+                copilot_vim = true,
+                indent_blankline = {
                     enabled = true,
-                    indentscope_color = "",
+                    colored_indent_levels = true,
                 },
+                mason = true,
+                treesitter = true,
             },
         })
         vim.cmd.colorscheme("catppuccin")
