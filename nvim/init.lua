@@ -3,7 +3,11 @@ vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
 vim.g.termguicolors = true
 
-vim.opt.guicursor = "" -- block cursor always
+-- vim.opt.guicursor = "" -- block cursor always
+vim.opt.guicursor="n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"..
+  ",a:blinkwait10-blinkoff10-blinkon10-Cursor/lCursor" ..
+  ",sm:block-blinkwait10-blinkoff10-blinkon10"
+
 vim.opt.number = true -- @todo is this needed since I only use relative?
 vim.opt.relativenumber = true
 vim.opt.mouse = "" -- disable mouse mode
@@ -23,7 +27,7 @@ vim.opt.splitbelow = true -- open new split below
 vim.opt.list = true -- @todo this doesn't seem to work
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- show live preview of substitution
-vim.opt.cursorline = true -- highlight the current line
+vim.opt.cursorline = false -- highlight the current line
 vim.opt.scrolloff = 10 -- keep 10 lines above and below the cursor
 vim.opt.wrap = false -- don't wrap based on the window size
 
