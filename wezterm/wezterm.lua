@@ -4,14 +4,15 @@ local config = wezterm.config_builder()
 config.color_scheme = "catppuccin-mocha"
 
 config.colors = {
-    background = "black",
+    background = "#000000",
     cursor_bg = "#f8f8f2",
     cursor_fg = "#282a36",
 }
 
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font("IosevkaTermNerdFontMono", { weight = "Medium" })
-config.font_size = 12
+config.font_size = 13
+config.cursor_blink_rate = 200
 
 config.window_padding = {
     left = 0,
