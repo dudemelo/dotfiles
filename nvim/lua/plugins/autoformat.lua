@@ -25,6 +25,7 @@ return {
             lua = { "stylua" },
             markdown = { "prettier" },
             terraform = { "terraform_fmt" },
+            toml = { "prettier" },
             typescript = { "prettier" },
             yaml = { "prettier" },
         },

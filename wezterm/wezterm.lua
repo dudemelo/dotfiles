@@ -10,7 +10,7 @@ config.colors = {
 }
 
 config.hide_tab_bar_if_only_one_tab = true
-config.font = wezterm.font("IosevkaTermNerdFontMono", { weight = "Medium" })
+config.font = wezterm.font("IosevkaTermNerdFontMono", { weight = "Regular" })
 config.font_size = 13
 config.cursor_blink_rate = 200
 
