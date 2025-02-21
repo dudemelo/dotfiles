@@ -259,7 +259,7 @@ client.placeholder      #000000 #000000 #ffffff #000000   #000000
 client.background       #ffffff
 
 # gaps inner 10
-default_border pixel 1
+default_border pixel 0
 
 bindsym $mod+p exec grimshot save window ~/Pictures/Screenshots/screenshot_$(date +%F_%T).png
 bindsym $mod+Shift+p exec grimshot copy area

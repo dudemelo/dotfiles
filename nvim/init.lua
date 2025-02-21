@@ -4,16 +4,16 @@ vim.g.have_nerd_font = true
 vim.g.termguicolors = true
 
 -- vim.opt.guicursor = "" -- block cursor always
-vim.opt.guicursor="n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"..
-  ",a:blinkwait10-blinkoff10-blinkon10-Cursor/lCursor" ..
-  ",sm:block-blinkwait10-blinkoff10-blinkon10"
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
+	.. ",a:blinkwait10-blinkoff10-blinkon10-Cursor/lCursor"
+	.. ",sm:block-blinkwait10-blinkoff10-blinkon10"
 
 vim.opt.number = true -- @todo is this needed since I only use relative?
 vim.opt.relativenumber = true
 vim.opt.mouse = "" -- disable mouse mode
 vim.opt.showmode = false -- mode is already in the statusline
 vim.schedule(function() -- same as above but with a delay
-    vim.opt.clipboard = "unnamedplus"
+	vim.opt.clipboard = "unnamedplus"
 end)
 vim.opt.breakindent = true
 vim.opt.undofile = true -- save undo history to file
@@ -50,56 +50,56 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 
 -- highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight when yanking text",
-    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
+	desc = "Highlight when yanking text",
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
 -- organize imports on save a go file
 vim.api.nvim_create_autocmd("BufWritePre", {
-    desc = "Organize imports on save a go file",
-    pattern = "*.go",
-    callback = function()
-        vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
-    end,
+	desc = "Organize imports on save a go file",
+	pattern = "*.go",
+	callback = function()
+		vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+	end,
 })
 
 -- install lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
 end
 vim.opt.rtp:prepend(lazypath)
 
 -- ocnfigured and install plugins
 require("lazy").setup({
-    "tpope/vim-sleuth", -- detect tabstop and shiftwidth
-    { "numToStr/Comment.nvim", opts = {} }, -- gc to comment visual lines
-    { import = "plugins" },
-    "tpope/vim-fugitive",
-    "tpope/vim-rhubarb", -- @todo what is this about?
-    { "folke/todo-comments.nvim", event = "VimEnter", dependencies = { "nvim-lua/plenary.nvim" } },
+	"tpope/vim-sleuth", -- detect tabstop and shiftwidth
+	{ "numToStr/Comment.nvim", opts = {} }, -- gc to comment visual lines
+	{ import = "plugins" },
+	"tpope/vim-fugitive",
+	"tpope/vim-rhubarb", -- @todo what is this about?
+	{ "folke/todo-comments.nvim", event = "VimEnter", dependencies = { "nvim-lua/plenary.nvim" } },
 }, {
-    ui = {
-        -- If you are using a Nerd Font: set icons to an empty table which will use the
-        -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-        icons = vim.g.have_nerd_font and {} or {
-            cmd = "⌘",
-            config = "🛠",
-            event = "📅",
-            ft = "📂",
-            init = "⚙",
-            keys = "🗝",
-            plugin = "🔌",
-            runtime = "💻",
-            require = "🌙",
-            source = "📄",
-            start = "🚀",
-            task = "📌",
-            lazy = "💤 ",
-        },
-    },
+	ui = {
+		-- If you are using a Nerd Font: set icons to an empty table which will use the
+		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+		icons = vim.g.have_nerd_font and {} or {
+			cmd = "⌘",
+			config = "🛠",
+			event = "📅",
+			ft = "📂",
+			init = "⚙",
+			keys = "🗝",
+			plugin = "🔌",
+			runtime = "💻",
+			require = "🌙",
+			source = "📄",
+			start = "🚀",
+			task = "📌",
+			lazy = "💤 ",
+		},
+	},
 })
