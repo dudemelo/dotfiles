@@ -24,8 +24,8 @@ vim.opt.updatetime = 300 -- reduce the time to save swap files
 vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete
 vim.opt.splitright = true -- open new split to the right
 vim.opt.splitbelow = true -- open new split below
-vim.opt.list = false -- disable listchars
--- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.list = true -- enable listchars
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- show live preview of substitution
 vim.opt.cursorline = false -- highlight the current line
 vim.opt.scrolloff = 10 -- keep 10 lines above and below the cursor

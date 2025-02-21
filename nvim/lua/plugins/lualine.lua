@@ -3,9 +3,6 @@ return {
 	opts = {
 		options = {
 			icons_enabled = false,
-			refresh = {
-				statusline = 1000,
-			},
 		},
 	},
 }
