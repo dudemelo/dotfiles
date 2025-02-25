@@ -1,7 +1,6 @@
 [
     {
         "layer": "top",
-        "output": "DP-5",
         "position": "top",
         "modules-left": [
             "sway/workspaces",
@@ -82,42 +81,4 @@
             "on-click": "pavucontrol"
         },
     },
-    {
-        "layer": "top",
-        "spacing": 0,
-        "position": "top",
-        "output": "eDP-1",
-        "mode": "dock",
-        "reload_style_on_change": true,
-        "modules-left": ["sway/workspaces"],
-        "modules-center": [
-            "clock"
-        ],
-        "modules-right": [
-            "battery",
-            "bluetooth",
-            "tray"
-        ],
-        "clock": {
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "{:%Y-%m-%d}"
-        },
-        "battery": {
-            "states": {
-                "good": 95,
-                "warning": 30,
-                "critical": 15
-            },
-            "format": "{capacity}% {icon}",
-            "format-full": "{capacity}% {icon}",
-            "format-charging": "{capacity}% ",
-            "format-plugged": "{capacity}% ",
-            "format-alt": "{time} {icon}",
-            "format-icons": ["", "", "", "", ""]
-        },
-        "tray": {
-            "icon-size": 20,
-            "spacing": 10
-        }
-    }
 ]

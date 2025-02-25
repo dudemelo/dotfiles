@@ -27,6 +27,10 @@ return {
 				mason = true,
 				treesitter = true,
 			},
+			styles = {
+				keywords = { "bold" },
+				types = { "bold" },
+			},
 		})
 		vim.cmd.colorscheme("catppuccin")
 	end,
