@@ -5,8 +5,8 @@ vim.g.termguicolors = true
 
 -- vim.opt.guicursor = "" -- block cursor always
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
-	.. ",a:blinkwait10-blinkoff10-blinkon10-Cursor/lCursor"
-	.. ",sm:block-blinkwait10-blinkoff10-blinkon10"
+	.. ",a:blinkwait400-blinkoff400-blinkon400-Cursor/lCursor"
+	.. ",sm:block-blinkwait400-blinkoff400-blinkon400"
 
 vim.opt.number = true -- @todo is this needed since I only use relative?
 vim.opt.relativenumber = true
