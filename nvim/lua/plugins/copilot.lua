@@ -1,6 +1,6 @@
 return {
 	"github/copilot.vim",
 	config = function()
-		vim.g.copilot_enabled = false
+		vim.g.copilot_enabled = true
 	end,
 }

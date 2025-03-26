@@ -27,6 +27,7 @@ return {
 			terraform = { "terraform_fmt" },
 			toml = { "prettier" },
 			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
 			yaml = { "prettier" },
 		},
 	},
