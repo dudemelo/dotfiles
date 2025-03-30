@@ -1,9 +1,9 @@
 return {
-	-- { -- Add indentation guides even on blank lines
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	-- Enable `lukas-reineke/indent-blankline.nvim`
-	-- 	-- See `:help ibl`
-	-- 	main = "ibl",
-	-- 	opts = {},
-	-- },
+	{
+		"nvimdev/indentmini.nvim",
+		config = function()
+			require("indentmini").setup({ only_current = true })
+			vim.cmd.highlight("IndentLineCurrent guifg=#4c4f69")
+		end,
+	},
 }
