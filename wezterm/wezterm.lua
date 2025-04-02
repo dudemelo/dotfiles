@@ -1,6 +1,10 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+config.adjust_window_size_when_changing_font_size = false
+config.animation_fps = 120
+config.check_for_updates = false
+
 config.color_scheme = "catppuccin-mocha"
 
 config.colors = {
@@ -9,11 +13,14 @@ config.colors = {
 	cursor_fg = "#282a36",
 }
 
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
+config.cursor_blink_rate = 400
+config.default_cursor_style = "BlinkingBlock"
+
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font("IosevkaTermNerdFontMono")
 config.font_size = 13
-config.default_cursor_style = "BlinkingBlock"
-config.cursor_blink_rate = 400
 
 config.window_padding = {
 	left = 0,
