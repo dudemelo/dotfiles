@@ -69,7 +69,7 @@ return {
 					},
 				},
 			},
-			markdownlint = {},
+			-- markdownlint = {},
 			phpactor = {},
 			prettier = {},
 			pyright = {},
