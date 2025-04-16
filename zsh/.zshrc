@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin:/usr/local/go/bin:/home/jfmelo/.local/bin:/home/jfmelo/.cargo/env"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin:/usr/local/go/bin:/home/jfmelo/.local/bin:/home/jfmelo/.cargo/env:/home/jfmelo/anaconda3/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
