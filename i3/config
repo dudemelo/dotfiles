@@ -42,27 +42,27 @@ exec blueman-applet
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
-#
+
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 output eDP-1 bg /home/jfmelo/Pictures/anime-girl-1.jpg fill
-# home setup
 output DP-5 bg /home/jfmelo/Pictures/anime-girl-2.jpg fill
-# office setup
-# output DP-4 bg /home/jfmelo/Pictures/anime-girl-2.jpg fill
 
 # home setup
+output eDP-1 pos 2560 0 res 2560x1600@60.000Hz
 output DP-5 pos 0 0 res 2560x1080@74.991Hz
-output eDP-1 pos 2560 0 res 2560x1600@120.000Hz scale 1.5
 
 # office setup
-# output eDP-1 pos 0 0 res 2560x1600@120.000Hz scale 1.5
+# output eDP-1 pos 0 0 res 2560x1600@120.000Hz
 # output DP-4 pos 2560 0 res 3440x1440@59.973Hz
+
+# Disable vsync to reduce input lag (optional, test if it helps)
+# output * vrr on
+output * max_render_time off
+
+# Explicitly set scale and refresh rate to avoid compositor quirks
+output eDP-1 scale 1.0
+output eDP-1 max_render_time 16
+output DP-5 max_render_time 13
 
 workspace 4 output eDP-1
 workspace 5 output eDP-1
