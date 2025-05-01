@@ -8,7 +8,7 @@ config.check_for_updates = false
 config.color_scheme = "catppuccin-mocha"
 
 config.colors = {
-	background = "#000000",
+	-- background = "#000000",
 	cursor_bg = "#f8f8f2",
 	cursor_fg = "#282a36",
 }
