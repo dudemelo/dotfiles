@@ -8,23 +8,25 @@ window#waybar {
   /* background-color: rgba(30, 30, 46, 0.5); */
   background-color: transparent;
   transition-property: background-color;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 
 #workspaces button {
+  background: transparent;
   border-radius: 100%;
   color: #b4befe;
   margin: 4px;
   padding: 0 4px;
 }
 
+#workspaces button:hover,
 #workspaces button.focused {
-  background-color: #b4befe;
+  background: #b4befe;
   color: #1e1e2e;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background: #eb4d4b;
 }
 
 #clock,

@@ -45,7 +45,7 @@ include /etc/sway/config-vars.d/*
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output eDP-1 bg /home/jfmelo/Pictures/anime-girl-1.jpg fill
-output DP-5 bg /home/jfmelo/Pictures/anime-girl-2.jpg fill
+output DP-5 bg /home/jfmelo/Pictures/luffy-1.jpg fill
 
 # home setup
 output eDP-1 pos 2560 0 res 2560x1600@60.000Hz
@@ -253,13 +253,9 @@ bindsym $mod+r mode "resize"
 
 client.focused #4c7899	#285577	#ffffff	#2e9ef4	#74c7ec
 
-# gaps inner 10
 gaps inner 10
-gaps outer 5
-# gaps horizontal 10
-# gaps bottom 10
 
-default_border pixel 2
+default_border pixel 3
 
 bindsym $mod+p exec grimshot save window ~/Pictures/Screenshots/screenshot_$(date +%F_%T).png
 bindsym $mod+Shift+p exec grimshot copy area
