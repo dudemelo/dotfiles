@@ -1,0 +1,19 @@
+window {
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+#input {
+  background: #111;
+  border: 0;
+  margin: 10px;
+  padding: 10px;
+}
+#entry {
+  margin: 0 2px;
+  padding: 10px;
+}
+#entry image {
+  margin-right: 8px;
+}

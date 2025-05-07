@@ -19,6 +19,16 @@ return {
 	},
 	config = function()
 		require("telescope").setup({
+			pickers = {
+				find_files = { theme = "ivy" },
+				git_files = { theme = "ivy" },
+				live_grep = { theme = "ivy" },
+				diagnostics = { theme = "ivy" },
+				oldfiles = { theme = "ivy" },
+				buffers = { theme = "ivy" },
+				lsp_references = { theme = "ivy" },
+				lsp_document_symbols = { theme = "ivy" },
+			},
 			extensions = {
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown(),
@@ -48,7 +58,7 @@ return {
 		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Find existing buffers" })
 
 		vim.keymap.set("n", "<leader>/", function()
-			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_ivy({
 				winblend = 10,
 				previewer = false,
 			}))
