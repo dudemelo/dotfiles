@@ -1,6 +1,6 @@
 * {
   font-family: IosevkaTermNerdFontMono, monospace, sans-serif;
-  font-size: 13.2px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -40,7 +40,7 @@ window#waybar {
 #tray {
   background-color: #181825;
   border-radius: 8px;
-  margin: 4px;
+  margin: 4px 2px;
   padding: 2px 10px 0 10px;
   color: #a6adc8;
 }
