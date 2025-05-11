@@ -7,7 +7,8 @@
             "custom/media",
         ],
         "modules-center": [
-            "clock"
+            "clock",
+	    "custom/pomodoro",
         ],
         "modules-right": [
             "network",
@@ -38,6 +39,12 @@
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format-alt": "{:%a, %B %d (%d-%m-%y)}",
         },
+	"custom/pomodoro": {
+	    "format": "{}",
+	    "exec": "/home/jfmelo/Projects/dotfiles/waybar/pomodoro.sh",
+	    "interval": 1,
+	    "on-click": "/home/jfmelo/Projects/dotfiles/waybar/pomodoro.sh --click"
+	},
         "cpu": {
             "format": "{usage}% CPU",
             "tooltip": false

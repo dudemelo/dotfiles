@@ -30,6 +30,7 @@ window#waybar {
 }
 
 #clock,
+#custom-pomodoro,
 #battery,
 #cpu,
 #memory,
