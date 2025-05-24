@@ -61,7 +61,7 @@ output DP-5 pos 0 0 res 2560x1080@74.991Hz
 output * max_render_time off
 
 # Explicitly set scale and refresh rate to avoid compositor quirks
-output eDP-1 scale 1.0
+output eDP-1 scale 1.5
 output eDP-1 max_render_time 16
 output DP-5 max_render_time 13
 

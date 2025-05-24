@@ -24,6 +24,7 @@ return {
 			json = { "prettier" },
 			lua = { "stylua" },
 			markdown = { "prettier" },
+			sql = { "pg_format" },
 			terraform = { "terraform_fmt" },
 			toml = { "prettier" },
 			typescript = { "prettier" },
