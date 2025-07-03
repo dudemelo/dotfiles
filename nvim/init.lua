@@ -3,6 +3,10 @@ vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
 vim.g.termguicolors = true
 
+-- disable sql complete
+vim.g.loaded_sql_completion = 1
+vim.g.omni_sql_no_default_mappings = 1
+
 -- vim.opt.guicursor = "" -- block cursor always
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 	.. ",a:blinkwait400-blinkoff400-blinkon400-Cursor/lCursor"
@@ -80,7 +84,6 @@ require("lazy").setup({
 	{ "numToStr/Comment.nvim", opts = {} }, -- gc to comment visual lines
 	{ import = "plugins" },
 	"tpope/vim-fugitive",
-	"tpope/vim-rhubarb", -- @todo what is this about?
 	{ "folke/todo-comments.nvim", event = "VimEnter", dependencies = { "nvim-lua/plenary.nvim" } },
 }, {
 	ui = {
