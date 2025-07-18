@@ -10,13 +10,6 @@ return {
 				shade = "light",
 				percentage = 0.20,
 			},
-			color_overrides = {
-				mocha = {
-					-- base = "#1f2335",
-					-- mantle = "#1f2335",
-					-- crust = "#1f2335",
-				},
-			},
 			integrations = {
 				cmp = true,
 				copilot_vim = true,
