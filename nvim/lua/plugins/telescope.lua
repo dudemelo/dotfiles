@@ -1,7 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	event = "VimEnter",
-	branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{
@@ -42,6 +41,7 @@ return {
 		vim.keymap.set("n", "<leader>sf", function()
 			builtin.find_files({ no_ignore = true })
 		end, { desc = "[S]earch [F]iles without .gitignore" })
+		vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 		vim.keymap.set("n", "<leader>sg", function()
 			builtin.live_grep({
@@ -51,15 +51,16 @@ return {
 			})
 		end, { desc = "[S]earch by [G]rep without .gitignore" })
 		vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
-		vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = "[S]earch recent files" })
-		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Find existing buffers" })
+		vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
+		vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
 		vim.keymap.set("n", "<leader>/", function()
-			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_ivy({
+			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 				winblend = 10,
 				previewer = false,
 			}))
-		end, { desc = "Fuzzily search in current buffer" })
+		end, { desc = "[/] Fuzzily search in current buffer" })
 
 		vim.keymap.set("n", "<C-p>", function()
 			builtin.git_files({ show_untracked = true })
