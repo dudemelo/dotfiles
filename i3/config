@@ -254,9 +254,9 @@ bindsym $mod+r mode "resize"
 
 client.focused #4c7899	#285577	#ffffff	#2e9ef4	#74c7ec
 
-gaps inner 10
+gaps inner 14
 
-default_border pixel 3
+default_border pixel 4
 
 bindsym $mod+p exec grimshot save window ~/Pictures/Screenshots/screenshot_$(date +%F_%T).png
 bindsym $mod+Shift+p exec grimshot copy area
