@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.termguicolors = true
+vim.o.termguicolors = true
 vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 	.. ",a:blinkwait400-blinkoff400-blinkon400-Cursor/lCursor"
 	.. ",sm:block-blinkwait400-blinkoff400-blinkon400"
