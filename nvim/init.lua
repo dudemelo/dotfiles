@@ -23,7 +23,7 @@ vim.o.timeoutlen = 300 -- time to wait for a mapped sequence to complete
 vim.o.splitright = true -- open new split to the right
 vim.o.splitbelow = true -- open new split below
 vim.o.list = true
-vim.opt.listchars = { lead = "·", nbsp = "␣", space = "·", tab = "» ", trail = "·" }
+vim.opt.listchars = { lead = "·", nbsp = "␣", tab = "» ", trail = "·" }
 vim.o.inccommand = "split" -- show live preview of substitution
 vim.o.cursorline = true -- highlight the current line
 vim.o.scrolloff = 10 -- keep 10 lines above and below the cursor
@@ -79,11 +79,9 @@ rtp:prepend(lazypath)
 
 -- ocnfigured and install plugins
 require("lazy").setup({
-	checker = { enabled = true },
+	checker = { enabled = false },
 	spec = {
 		{ import = "plugins" },
 	},
-	-- "tpope/vim-sleuth", -- detect tabstop and shiftwidth
 	-- { "numToStr/Comment.nvim", opts = {} }, -- gc to comment visual lines
-	-- "tpope/vim-fugitive",
 })
