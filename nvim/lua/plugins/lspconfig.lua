@@ -74,11 +74,11 @@ return {
 
 		local servers = {
 			clangd = {},
-			intelephense = {},
-			dockerls = {},
-			gopls = {},
-			hadolint = {},
-			html = { filetypes = { "html", "twig", "hbs" } },
+			-- intelephense = {},
+			-- dockerls = {},
+			-- gopls = {},
+			-- hadolint = {},
+			html = { filetypes = { "hbs", "html", "hbs", "tpl", "twig" } },
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -88,15 +88,16 @@ return {
 					},
 				},
 			},
-			markdownlint = {},
-			phpactor = {},
+			-- markdownlint = {},
+			-- phpactor = {},
 			prettier = {},
-			pyright = {},
-			rust_analyzer = {},
-			stylua = {},
+			-- pyright = {},
+			-- rust_analyzer = {},
+			-- stylua = {},
 			terraformls = {},
 			tflint = {},
-			yamlls = {},
+			ts_ls = {},
+			-- yamlls = {},
 		}
 
 		local ensure_installed = vim.tbl_keys(servers or {})
