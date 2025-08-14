@@ -92,7 +92,7 @@ return {
 			-- phpactor = {},
 			prettier = {},
 			-- pyright = {},
-			-- rust_analyzer = {},
+			rust_analyzer = {},
 			-- stylua = {},
 			terraformls = {},
 			tflint = {},
