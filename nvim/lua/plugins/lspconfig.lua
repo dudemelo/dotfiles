@@ -75,9 +75,9 @@ return {
 		local servers = {
 			clangd = {},
 			-- intelephense = {},
-			-- dockerls = {},
+			dockerls = {},
 			-- gopls = {},
-			-- hadolint = {},
+			hadolint = {},
 			html = { filetypes = { "hbs", "html", "hbs", "tpl", "twig" } },
 			lua_ls = {
 				settings = {
