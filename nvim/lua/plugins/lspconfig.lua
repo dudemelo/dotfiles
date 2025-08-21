@@ -74,6 +74,7 @@ return {
 
 		local servers = {
 			clangd = {},
+			cmake = {},
 			-- intelephense = {},
 			dockerls = {},
 			-- gopls = {},
