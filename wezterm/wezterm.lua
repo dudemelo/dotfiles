@@ -21,8 +21,8 @@ config.default_cursor_style = "BlinkingBlock"
 
 config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
-config.font = wezterm.font("IosevkaTermNerdFontMono", { weight = "Regular" })
-config.font_size = 13.2
+config.font = wezterm.font("IosevkaTermNerdFontMono")
+config.font_size = 13.8
 
 config.window_padding = {
 	left = 0,
