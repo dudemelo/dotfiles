@@ -72,7 +72,7 @@ ZSH_CUSTOM=/home/jfmelo/Projects/dotfiles/oh-my-zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pj zsh-syntax-highlighting timer)
+plugins=(git minikube pj zsh-syntax-highlighting terraform timer)
 PROJECT_PATHS=(~/Projects ~/scribbr)
 
 source $ZSH/oh-my-zsh.sh
@@ -115,7 +115,6 @@ fi
 #alias php='docker run --name php --rm -v $PWD:/var/www -p 8080:8080 -w /var/www php:8-alpine php'
 alias pypy='docker run --name pypy --rm -v $PWD:/var/www -p 8080:8080 -w /var/www pypy:slim pypy'
 alias composer1='docker run -it --name composer --rm -v $PWD:/app -w /app -e HOME=/app composer composer'
-alias terraform='docker run --rm -it -v $HOME/.ssh:/root/.ssh -v $HOME/.aws:/root/.aws -v $PWD:/var/www -w /var/www hashicorp/terraform:latest'
 alias eth='docker run -it --rm -v $PWD:/share trailofbits/eth-security-toolbox'
 alias bettercap='sudo docker run --rm -it --privileged --net=host -p 80:80 -p 8081:8081  bettercap/bettercap bettercap'
 alias mysql='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www mysql mysql'
@@ -124,7 +123,8 @@ alias mysqldump='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w
 alias redis-cli='docker run --rm -it --privileged --net=host -v $PWD:/var/www -w /var/www redis:alpine redis-cli'
 alias ds='docker compose'
 alias v='nvim .'
-alias tf='terraform'
+# alias terraform='docker run --rm -it -v $HOME/.ssh:/root/.ssh -v $HOME/.aws:/root/.aws -v $PWD:/var/www -w /var/www hashicorp/terraform:latest'
+# alias tf='terraform'
 alias dit='docker exec -it'
 alias ditu='docker exec -itu root'
 alias gooff='nvidia-settings --assign="CurrentMetaMode=DPY-0: nvidia-auto-select @2560x1080 +0+0 {ViewPortIn=2560x1080, ViewPortOut=2560x1080+0+0}" && sleep 2 && xrandr --output eDP-1-1 --auto --primary --right-of HDMI-0 && sleep 2 && nitrogen --restore'
@@ -136,6 +136,7 @@ alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpi
 alias dotnet='docker run -it -v $PWD:/var/www -w /var/www --rm -p 8000:8080 mcr.microsoft.com/dotnet/sdk:8.0 dotnet'
 alias cloudflared='docker run -it --rm --privileged --net=host cloudflare/cloudflared'
 alias up='sudo apt update; sudo apt dist-upgrade; sudo apt autoremove; sudo apt autoclean; sudo apt remove; sudo apt clean'
+alias kubectl='minikube kubectl --'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
