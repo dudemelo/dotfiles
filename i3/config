@@ -250,7 +250,7 @@ bindsym $mod+r mode "resize"
 
 client.focused #4c7899	#285577	#ffffff	#2e9ef4	#74c7ec
 
-gaps inner 14
+gaps inner 0
 
 default_border pixel 4
 
@@ -267,3 +267,5 @@ include /etc/sway/config.d/*
 bar swaybar_command waybar
 
 # exec /usr/lib/pentablet/PenTablet.sh /mini
+exec export WLR_RENDERER=vulkan
+exec export LIBVA_DRIVER_NAME=iHD

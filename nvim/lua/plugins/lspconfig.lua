@@ -122,10 +122,9 @@ return {
 			},
 		})
 
-		local gdscript_config = {
-			capabilities = capabilities,
-			settings = {},
-		}
-		require("lspconfig").gdscript.setup(gdscript_config)
+		-- require("lspconfig").gdscript.setup({
+		-- 	capabilities = capabilities,
+		-- 	settings = {},
+		-- })
 	end,
 }
