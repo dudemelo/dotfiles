@@ -27,7 +27,6 @@ vim.opt.listchars = { lead = "·", nbsp = "␣", tab = "» ", trail = "·" }
 vim.o.inccommand = "split" -- show live preview of substitution
 vim.o.cursorline = true -- highlight the current line
 vim.o.scrolloff = 10 -- keep 10 lines above and below the cursor
-vim.o.confirm = true -- don't raise dialog for unsaved file
 vim.o.wrap = false -- don't wrap based on the window size
 
 -- highlight search results but clear on <Esc>
@@ -35,8 +34,8 @@ vim.o.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- move lines up and down in visual mode
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Moves line down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Moves line up" })
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Moves line down" })
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Moves line up" })
 
 -- diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
