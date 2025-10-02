@@ -77,7 +77,7 @@ return {
 			cmake = {},
 			-- intelephense = {},
 			dockerls = {},
-			-- gopls = {},
+			gopls = {},
 			gofumpt = {},
 			hadolint = {},
 			html = { filetypes = { "hbs", "html", "hbs", "tpl", "twig" } },
