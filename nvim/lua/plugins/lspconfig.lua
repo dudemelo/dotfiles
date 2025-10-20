@@ -94,7 +94,7 @@ return {
 			-- phpactor = {},
 			pgformatter = {},
 			prettier = {},
-			-- pyright = {},
+			ruff = {},
 			rust_analyzer = {},
 			stylua = {},
 			terraformls = {},
