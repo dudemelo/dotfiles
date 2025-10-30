@@ -269,3 +269,7 @@ bar swaybar_command waybar
 # exec /usr/lib/pentablet/PenTablet.sh /mini
 exec export WLR_RENDERER=vulkan
 exec export LIBVA_DRIVER_NAME=iHD
+
+# Logitech webcam
+# exec v4l2-ctl -d /dev/video1 --set-fmt-video=width=1280,height=720,pixelformat=MJPG,pixelformat=YUYV
+exec ~/Projects/dotfiles/i3/webcam.sh
