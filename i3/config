@@ -45,8 +45,8 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output eDP-1 bg /home/jfmelo/Pictures/solo-leveling.jpeg fill
-output DP-6 bg /home/jfmelo/Pictures/anime-girl-3.jpg fill
+output eDP-1 bg /usr/share/backgrounds/DSC2943_by_kcpru.jpg fill
+output DP-6 bg /usr/share/backgrounds/DSC2943_by_kcpru.jpg fill
 
 # home setup
 output eDP-1 pos 2560 0 res 2560x1600@60.000Hz
