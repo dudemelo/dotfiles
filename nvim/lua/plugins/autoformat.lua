@@ -14,6 +14,22 @@ return {
 	},
 	opts = {
 		notify_on_error = false,
+		formatters = {
+			prettier_md = {
+				command = "prettier",
+				args = {
+					"--stdin-filepath",
+					"$FILENAME",
+					"--parser",
+					"markdown",
+					"--print-width",
+					"80",
+					"--prose-wrap",
+					"always",
+				},
+				stdin = true,
+			},
+		},
 		formatters_by_ft = {
 			c = { "clang_format" },
 			cpp = { "clang_format" },
@@ -23,7 +39,7 @@ return {
 			javascript = { "prettier" },
 			json = { "prettier" },
 			lua = { "stylua" },
-			markdown = { "prettier" },
+			markdown = { "prettier_md" },
 			sql = { "pg_format" },
 			terraform = { "terraform_fmt" },
 			toml = { "prettier" },

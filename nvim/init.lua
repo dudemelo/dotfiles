@@ -25,7 +25,7 @@ vim.o.splitbelow = true -- open new split below
 vim.o.list = true
 vim.opt.listchars = { lead = "·", nbsp = "␣", tab = "» ", trail = "·" }
 vim.o.inccommand = "split" -- show live preview of substitution
-vim.o.cursorline = true -- highlight the current line
+vim.o.cursorline = false -- highlight the current line
 vim.o.scrolloff = 10 -- keep 10 lines above and below the cursor
 vim.o.wrap = false -- don't wrap based on the window size
 
