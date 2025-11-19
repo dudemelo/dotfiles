@@ -6,6 +6,14 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		{ "j-hui/fidget.nvim", opts = {} },
 		"saghen/blink.cmp",
+		{
+			"qvalentin/helm-ls.nvim",
+			ft = "helm",
+			dependencies = { "nvim-treesitter/nvim-treesitter" },
+			opts = {
+				conceal_templates = { enabled = false },
+			},
+		},
 	},
 	config = function()
 		vim.lsp.set_log_level("OFF")
@@ -80,6 +88,15 @@ return {
 			gopls = {},
 			gofumpt = {},
 			hadolint = {},
+			helm_ls = {
+				settings = {
+					["helm-ls"] = {
+						yamlls = {
+							path = "yaml-language-server",
+						},
+					},
+				},
+			},
 			html = { filetypes = { "hbs", "html", "hbs", "tpl", "twig" } },
 			lua_ls = {
 				settings = {

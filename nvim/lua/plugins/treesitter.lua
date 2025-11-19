@@ -12,6 +12,7 @@ return {
 			"java",
 			"javascript",
 			"jsdoc",
+			"helm",
 			"html",
 			"lua",
 			"php",
