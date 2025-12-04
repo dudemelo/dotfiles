@@ -12,10 +12,10 @@ config.colors = {
 	cursor_fg = "#282a36",
 }
 
-config.cursor_blink_ease_in = "Constant"
-config.cursor_blink_ease_out = "Constant"
-config.cursor_blink_rate = 300
-config.default_cursor_style = "BlinkingBlock"
+-- config.cursor_blink_ease_in = "Constant"
+-- config.cursor_blink_ease_out = "Constant"
+-- config.cursor_blink_rate = 300
+-- config.default_cursor_style = "BlinkingBlock"
 
 config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
