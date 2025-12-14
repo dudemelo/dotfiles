@@ -136,7 +136,6 @@ alias ab='docker run --rm -it --net=host -v $PWD:/var/www -w /var/www httpd:alpi
 alias dotnet='docker run -it -v $PWD:/var/www -w /var/www --rm -p 8000:8080 mcr.microsoft.com/dotnet/sdk:8.0 dotnet'
 alias cloudflared='docker run -it --rm --privileged --net=host cloudflare/cloudflared'
 alias up='sudo apt update; sudo apt dist-upgrade; sudo apt autoremove; sudo apt autoclean; sudo apt remove; sudo apt clean'
-alias kctl='kubectl'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -144,3 +143,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export XDG_CURRENT_DESKTOP=sway
 export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
+
+# Updates path to add gcloud and shell completion
+if [ -f '/home/jfmelo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jfmelo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/jfmelo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jfmelo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
