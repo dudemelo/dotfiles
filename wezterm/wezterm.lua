@@ -4,12 +4,12 @@ local config = wezterm.config_builder()
 config.adjust_window_size_when_changing_font_size = false
 config.check_for_updates = false
 
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "catppuccin-mocha"
 
 config.colors = {
-	background = "#000000",
-	cursor_bg = "#f8f8f2",
-	cursor_fg = "#282a36",
+	-- background = "#000000",
+	-- cursor_bg = "#f8f8f2",
+	-- cursor_fg = "#282a36",
 }
 
 -- config.cursor_blink_ease_in = "Constant"
