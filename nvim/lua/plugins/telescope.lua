@@ -46,7 +46,7 @@ return {
 		vim.keymap.set("n", "<leader>sg", function()
 			builtin.live_grep({
 				additional_args = function()
-					return { "--no-ignore", "-F" }
+					return { "--no-ignore", "--hidden", "-F", "--glob", "!.git/*" }
 				end,
 			})
 		end, { desc = "[S]earch by [G]rep without .gitignore" })
