@@ -81,5 +81,4 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	-- { "numToStr/Comment.nvim", opts = {} }, -- gc to comment visual lines
 })
