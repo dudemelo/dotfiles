@@ -1,21 +1,17 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.o.termguicolors = true
-vim.o.cmdheight = 0
-vim.o.laststatus = 2
--- vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
--- 	.. ",a:blinkwait400-blinkoff400-blinkon400-Cursor/lCursor"
--- 	.. ",sm:block-blinkwait400-blinkoff400-blinkon400"
+vim.o.termguicolors = true -- enables true color
+vim.o.laststatus = 2 -- always show status line
 vim.o.number = true -- @todo is this needed since I only use relative?
 vim.o.relativenumber = true
 vim.o.mouse = "" -- disable mouse mode
-vim.o.showmode = false -- mode is already in the statusline
-vim.schedule(function() -- same as above but with a delay
+vim.o.showmode = true -- mode is already in the statusline
+vim.schedule(function() -- sync clipboard with OS
 	vim.o.clipboard = "unnamedplus"
 end)
 vim.o.breakindent = true
 vim.o.undofile = true -- save undo history to file
-vim.o.ignorecase = true -- ignore case when searching unless a capital letter is used
+vim.o.ignorecase = true -- ignore case on search unless there's a uppercase letter
 vim.o.smartcase = true
 vim.o.signcolumn = "yes" -- sign column always visible
 vim.o.updatetime = 300 -- reduce the time to save swap files
@@ -26,7 +22,7 @@ vim.o.list = true
 vim.opt.listchars = { lead = "·", nbsp = "␣", tab = "» ", trail = "·" }
 vim.o.inccommand = "split" -- show live preview of substitution
 vim.o.cursorline = false -- highlight the current line
-vim.o.scrolloff = 10 -- keep 10 lines above and below the cursor
+vim.o.scrolloff = 5 -- lines to keep above and below to start scrolling
 vim.o.wrap = false -- don't wrap based on the window size
 
 -- highlight search results but clear on <Esc>
@@ -37,8 +33,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>ex", "<Cmd>Explore<CR>")
 
 -- move lines up and down in visual mode
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Moves line down" })
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Moves line up" })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Moves line down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Moves line up" })
 
 -- diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
