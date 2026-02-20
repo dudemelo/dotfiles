@@ -17,7 +17,9 @@ return {
 				vim.keymap.set(mode, l, r, opts)
 			end
 
-			map("n", "<leader>hb", gitsigns.blame_line, { desc = "git [b]lame line" })
+			map("n", "<leader>hb", function()
+				gitsigns.blame_line({ full = true })
+			end, { desc = "git [b]lame line" })
 		end,
 	},
 }

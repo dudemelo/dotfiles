@@ -77,8 +77,26 @@ rtp:prepend(lazypath)
 
 -- ocnfigured and install plugins
 require("lazy").setup({
-	checker = { enabled = false },
-	spec = {
-		{ import = "plugins" },
+	{
+		"NMAC427/guess-indent.nvim",
+		opts = {},
 	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {},
+	},
+	{
+		"tpope/vim-sleuth",
+	},
+	{
+		"tpope/vim-fugitive",
+	},
+	{
+		"github/copilot.vim",
+		config = function()
+			vim.g.copilot_enabled = false
+		end,
+	},
+	{ import = "plugins" },
 })
