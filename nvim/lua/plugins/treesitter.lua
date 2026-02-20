@@ -1,9 +1,9 @@
-return {
+return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	main = "nvim-treesitter.configs",
-	opts = {
-		ensure_installed = {
+	config = function()
+		local filetypes = {
+			"bash",
+			"c",
 			"css",
 			"diff",
 			"dockerfile",
@@ -33,15 +33,13 @@ return {
 			"vimdoc",
 			"vue",
 			"yaml",
-		},
-		auto_install = true,
-		highlight = {
-			enable = true,
-			additional_vim_regex_highlighting = { "ruby" },
-		},
-		indent = {
-			enable = true,
-			disable = { "ruby" },
-		},
-	},
+		}
+		require("nvim-treesitter").install(filetypes)
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = filetypes,
+			callback = function()
+				vim.treesitter.start()
+			end,
+		})
+	end,
 }

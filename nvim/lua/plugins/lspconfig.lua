@@ -73,6 +73,7 @@ return {
 
 		local servers = {
 			clangd = {},
+			-- clang_format = {},
 			cmake = {},
 			-- intelephense = {},
 			dockerls = {},
