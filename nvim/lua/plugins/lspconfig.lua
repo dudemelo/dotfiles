@@ -51,7 +51,7 @@ return {
 				},
 			},
 			html = { filetypes = { "hbs", "html", "hbs", "tpl", "twig" } },
-			-- markdownlint = {},
+			markdownlint = {},
 			-- phpactor = {},
 			pgformatter = {},
 			prettier = {},
