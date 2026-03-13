@@ -39,8 +39,7 @@ return {
 			-- intelephense = {},
 			dockerls = {},
 			gopls = {},
-			gofumpt = {},
-			hadolint = {},
+			pyright = {},
 			helm_ls = {
 				settings = {
 					["helm-ls"] = {
@@ -51,27 +50,36 @@ return {
 				},
 			},
 			html = { filetypes = { "hbs", "html", "hbs", "tpl", "twig" } },
-			markdownlint = {},
 			-- phpactor = {},
-			pgformatter = {},
-			prettier = {},
 			ruff = {},
 			rust_analyzer = {},
-			stylua = {},
 			terraformls = {},
-			terraform = {},
-			tflint = {},
 			ts_ls = {},
 			yamlls = {},
 		}
 
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
-			"stylua",
-			"lua_ls",
+		-- Ensure LSP servers are installed via Mason.
+		-- Server names don't always match Mason package names (e.g. ts_ls),
+		-- so use mason-lspconfig's mapping.
+		local lsp_ensure_installed = vim.tbl_keys(servers or {})
+		vim.list_extend(lsp_ensure_installed, { "lua_ls" })
+		require("mason-lspconfig").setup({
+			ensure_installed = lsp_ensure_installed,
+			automatic_installation = true,
 		})
 
-		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+		-- Non-LSP tools installed via Mason (formatters/linters/etc.).
+		local tools = {
+			"gofumpt",
+			"hadolint",
+			"markdownlint",
+			"pgformatter",
+			"prettier",
+			"stylua",
+			"tflint",
+		}
+
+		require("mason-tool-installer").setup({ ensure_installed = tools })
 
 		for name, server in pairs(servers) do
 			server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})

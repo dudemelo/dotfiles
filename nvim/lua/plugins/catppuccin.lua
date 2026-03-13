@@ -8,28 +8,22 @@ return {
 			dim_inactive = {
 				enabled = true,
 			},
-			color_overrides = {
-				mocha = {
-					-- base = "#000000",
-					-- mantle = "#000000",
-					-- crust = "#000000",
-				},
-			},
-			integrations = {
-				cmp = true,
-				copilot_vim = true,
-				indent_blankline = {
-					enabled = true,
-					colored_indent_levels = true,
-				},
-				mason = true,
-				treesitter = true,
-			},
 			styles = {
 				keywords = { "bold" },
 				types = { "bold" },
 			},
+			-- color_overrides = {
+			-- 	mocha = {
+			-- 		-- base = "#000000",
+			-- 		-- mantle = "#000000",
+			-- 		-- crust = "#000000",
+			-- 	},
+			-- },
+			integrations = {
+				copilot_vim = true,
+				mason = true,
+			},
 		})
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme("catppuccin-nvim")
 	end,
 }

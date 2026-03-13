@@ -1,7 +1,9 @@
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	build = ":TSUpdate",
 	config = function()
-		local filetypes = {
+		local parsers = {
 			"bash",
 			"c",
 			"css",
@@ -15,12 +17,12 @@ return { -- Highlight, edit, and navigate code
 			"helm",
 			"html",
 			"lua",
-			"php",
-			"phpdoc",
 			"make",
 			"markdown",
 			"markdown_inline",
 			"ocaml",
+			"php",
+			"phpdoc",
 			"python",
 			"query",
 			"rust",
@@ -34,11 +36,14 @@ return { -- Highlight, edit, and navigate code
 			"vue",
 			"yaml",
 		}
-		require("nvim-treesitter").install(filetypes)
+
+		-- Install parsers asynchronously (no-op if already installed).
+		require("nvim-treesitter").install(parsers)
+
+		-- Enable treesitter highlighting via Neovim's built-in support.
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = filetypes,
-			callback = function()
-				vim.treesitter.start()
+			callback = function(event)
+				pcall(vim.treesitter.start, event.buf)
 			end,
 		})
 	end,

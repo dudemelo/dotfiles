@@ -40,6 +40,7 @@ return {
 			json = { "prettier" },
 			lua = { "stylua" },
 			markdown = { "prettier_md" },
+			python = { "ruff_organize_imports", "ruff_format" },
 			sql = { "pg_format" },
 			terraform = { "terraform_fmt" },
 			toml = { "prettier" },

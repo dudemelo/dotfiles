@@ -6,11 +6,11 @@ config.check_for_updates = false
 
 config.color_scheme = "catppuccin-mocha"
 
-config.colors = {
-	-- background = "#000000",
-	-- cursor_bg = "#f8f8f2",
-	-- cursor_fg = "#282a36",
-}
+-- config.colors = {
+-- 	background = "#000000",
+-- 	cursor_bg = "#f8f8f2",
+-- 	cursor_fg = "#282a36",
+-- }
 
 -- config.cursor_blink_ease_in = "Constant"
 -- config.cursor_blink_ease_out = "Constant"

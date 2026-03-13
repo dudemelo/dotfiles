@@ -76,6 +76,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	desc = "Organize imports on save a go file",
 	pattern = "*.go",
 	callback = function()
+		if vim.lsp.get_clients({ bufnr = 0 }) == 0 then
+			return
+		end
 		vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
 	end,
 })
