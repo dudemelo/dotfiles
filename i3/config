@@ -46,7 +46,7 @@ include /etc/sway/config-vars.d/*
 
 # Monitor
 output DP-1 bg ~/Pictures/anime-umbrella.jpg center
-output DP-1 pos 0 0 res 2560x1080@74.991Hz
+output DP-1 pos 0 0 res 1920x1200@59.950Hz
 # output DP-1 max_render_time 13
 
 workspace 1 output DP-1
@@ -56,7 +56,7 @@ workspace 3 output DP-1
 
 # Laptop
 output eDP-1 bg ~/Pictures/solo-leveling.jpeg fill
-output eDP-1 pos 2560 0 res 2560x1600@60.000Hz
+output eDP-1 pos 1920 0 res 2560x1600@60.000Hz
 output eDP-1 max_render_time 16
 output eDP-1 scale 1.8
 
