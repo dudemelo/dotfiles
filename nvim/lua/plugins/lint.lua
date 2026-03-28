@@ -6,6 +6,7 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				dockerfile = { "hadolint" },
+				go = { "golangcilint" },
 				markdown = { "markdownlint" },
 				terraform = { "tflint" },
 			}

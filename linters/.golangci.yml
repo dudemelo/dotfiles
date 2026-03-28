@@ -1,0 +1,18 @@
+version: "2"
+linters:
+  default: all
+  enable:
+    - gocritic
+    - govet
+    - ineffassign
+    - prealloc
+    - staticcheck
+  disable:
+    - errcheck
+  settings:
+    gocritic:
+      enable-all: true
+    govet:
+      enable-all: true
+run:
+  timeout: 5m

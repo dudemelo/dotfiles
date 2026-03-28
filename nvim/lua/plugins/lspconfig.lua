@@ -71,6 +71,7 @@ return {
 		-- Non-LSP tools installed via Mason (formatters/linters/etc.).
 		local tools = {
 			"gofumpt",
+			"golangci-lint",
 			"hadolint",
 			"markdownlint",
 			"pgformatter",
