@@ -12,13 +12,13 @@ return {
 				keywords = { "bold" },
 				types = { "bold" },
 			},
-			-- color_overrides = {
-			-- 	mocha = {
-			-- 		-- base = "#000000",
-			-- 		-- mantle = "#000000",
-			-- 		-- crust = "#000000",
-			-- 	},
-			-- },
+			color_overrides = {
+				mocha = {
+					base = "#111111",
+					mantle = "#111111",
+					crust = "#111111",
+				},
+			},
 			integrations = {
 				copilot_vim = true,
 				mason = true,
