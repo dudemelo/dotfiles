@@ -25,6 +25,11 @@ vim.o.cursorline = false -- highlight the current line
 vim.o.scrolloff = 5 -- lines to keep above and below to start scrolling
 vim.o.wrap = false -- don't wrap based on the window size
 
+-- blink cursor
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
+	.. ",a:blinkwait10-blinkoff10-blinkon10-Cursor/lCursor"
+	.. ",sm:block-blinkwait10-blinkoff10-blinkon10"
+
 -- highlight search results but clear on <Esc>
 vim.o.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
