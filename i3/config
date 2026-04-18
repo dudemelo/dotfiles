@@ -262,3 +262,6 @@ bar swaybar_command waybar
 # Logitech webcam
 # exec v4l2-ctl -d /dev/video1 --set-fmt-video=width=1280,height=720,pixelformat=MJPG,pixelformat=YUYV
 exec ~/Projects/dotfiles/i3/webcam.sh
+
+# for_window [app_id="brave-browser" title=".*(Find|Search)"] floating enable
+for_window [app_id="gnome-calculator"] floating enable, move position center
